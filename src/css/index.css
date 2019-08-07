@@ -338,9 +338,117 @@ template {
   display: none;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #0e1e25;
+  background: #f4f7f8;
+  line-height: 1.7;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+}
+
+.flex, .menu,
+.container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.menu,
+.container {
+  position: relative;
+}
+
+.menu {
+  background-color: #5089a2;
+  text-decoration: none;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.menu > a:hover {
+  background-color: #162a33;
+  transition: 0.2s ease;
+}
+
+.text-muted {
+  color: #7f898c;
+}
+
+.left-section,
+.right-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.left-section {
+  width: 45%;
+  background: url("/src/images/costantine.jpg");
+  background-size: cover;
+}
+
+.right-section {
+  width: 55%;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  flex-basis: 100%;
+}
+
+.left-section .child {
+  align-items: center;
+  justify-content: center;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #fff;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+.lead {
+  color: #51676d;
+  margin: 0 0 0.8em;
+  font-size: 1.3em;
+  text-indent: 0.2em;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$bg_color : #f4f7f8;
+$margin :15px;
+$padding :15px;
+$main_color :#0e1e25;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #0e1e25;
+    color: $main_color;
+    background: $bg_color;
+    line-height: 1.7;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5em 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.menu,
+.container {
+    @extend .flex;
+    position: relative;
+}
+
+.menu {
+    background-color: #5089a2;
+    text-decoration: none;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: $padding;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.menu>a:hover {
+    background-color: #162a33;
+    transition: 0.2s ease;
+}
+
+.text-muted {
+    color: #7f898c;
 }
