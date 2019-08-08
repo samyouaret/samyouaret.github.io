@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Content from './components/Content';
 
-const title = 'React with Webpack and Babel';
-
-ReactDOM.render(<div>{title}</div>,
+ReactDOM.render(<Content />,
     document.getElementById('content')
 );
