@@ -11,6 +11,7 @@ function ContentBrowser() {
         <div className="content">
             <Switch>
                 <Route path='/' exact component={Home} />
+                <Route path='/index.html' exact component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/Social' exact component={Social} />
                 <Route path='/Resume' exact component={Resume} />
