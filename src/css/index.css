@@ -364,6 +364,10 @@ h6 {
   margin: 0.5em 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .flex, .menu,
 .container {
   display: flex;
@@ -433,7 +437,6 @@ h6 {
 
 .left-section {
   width: 45%;
-  background: url("/src/images/costantine.jpg");
   background-size: cover;
 }
 
@@ -450,13 +453,11 @@ h6 {
 
 .left-section .child {
   align-items: center;
-  justify-content: center;
 }
 
 .rounded-img {
   border-radius: 50%;
   overflow: hidden;
-  border: 8px solid #fff;
 }
 
 .img {

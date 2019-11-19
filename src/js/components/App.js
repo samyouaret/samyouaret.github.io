@@ -14,6 +14,8 @@ export default function App() {
                         <div className="rounded-img">
                             <img src="/src/images/ouaretsamy-cropped.png" className="img" />
                         </div>
+                        <h2 className="flex flex-column text-center">Samy Ouaret</h2>
+                        <strong className="text">Web developer, PHP programmer, React lover</strong>
                     </SectionChild>
                 </div>
                 <div className="right-section">

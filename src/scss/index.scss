@@ -9,7 +9,6 @@
 
 .left-section {
     width: 45%;
-    background: url("/src/images/costantine.jpg");
     background-size: cover;
 }
 
@@ -26,13 +25,11 @@
 
 .left-section .child {
     align-items: center;
-    justify-content: center;
 }
 
 .rounded-img {
     border-radius: 50%;
     overflow: hidden;
-    border: 8px solid #fff;
 }
 
 .img {
