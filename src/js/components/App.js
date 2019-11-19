@@ -2,10 +2,10 @@ import React from 'react';
 import Nav from './Nav';
 import ContentBrowser from './ContentBrowser';
 import SectionChild from './SectionChild';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-export default function App() {   
-    return ( <Router>
+export default function App() {
+    return (<Router>
         <div className="app">
             <Nav />
             <div className="flex">
@@ -24,6 +24,6 @@ export default function App() {
                     </SectionChild>
                 </div>
             </div>
-    </div>
+        </div>
     </Router>);
 }

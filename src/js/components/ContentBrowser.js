@@ -12,11 +12,11 @@ function ContentBrowser() {
     return (
         <div className="content">
             <Switch>
-                <Route component={NotFound} />
                 <Route path='/' exact component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/Social' component={Social} />
                 <Route path='/Resume' component={Resume} />
+                <Route component={NotFound} />
             </Switch>
         </div>
     );

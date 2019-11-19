@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-$bg_color : #f4f7f8;
+$bg_color : #f8f8f8;
 $margin :15px;
 $padding :15px;
 $main_color :#0e1e25;
@@ -51,7 +51,8 @@ h6 {
 .menu {
     background-color: #5089a2;
     text-decoration: none;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 15px;
     color: #ffffff;
 }
 
@@ -59,11 +60,17 @@ h6 {
     text-decoration: none;
     padding: $padding;
     display: inline-block;
-    color: #ffffff;
+    color: #f4f7f8;
 }
 
-.menu>a:hover {
-    background-color: #162a33;
+.menu .brand {
+    font-weight: 600;
+    font-size: 17px;
+
+}
+
+.menu .links a:hover {
+    background-color: #406f84;
     transition: 0.2s ease;
 }
 

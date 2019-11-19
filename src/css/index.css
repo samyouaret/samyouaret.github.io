@@ -347,7 +347,7 @@ template {
 body {
   font-family: "Nunito", sans-serif;
   color: #0e1e25;
-  background: #f4f7f8;
+  background: #f8f8f8;
   line-height: 1.7;
 }
 
@@ -385,7 +385,8 @@ h6 {
 .menu {
   background-color: #5089a2;
   text-decoration: none;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 15px;
   color: #ffffff;
 }
 
@@ -393,11 +394,15 @@ h6 {
   text-decoration: none;
   padding: 15px;
   display: inline-block;
-  color: #ffffff;
+  color: #f4f7f8;
 }
 
-.menu > a:hover {
-  background-color: #162a33;
+.menu .brand {
+  font-weight: 600;
+}
+
+.menu .links a:hover {
+  background-color: #406f84;
   transition: 0.2s ease;
 }
 
