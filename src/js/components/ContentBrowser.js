@@ -3,18 +3,20 @@ import Social from './Social';
 import About from './About';
 import Resume from './Resume';
 import Home from './Home';
+import NotFound from './NotFound';
 
 import { Switch, Route } from 'react-router-dom';
+
 
 function ContentBrowser() {
     return (
         <div className="content">
             <Switch>
+                <Route component={NotFound} />
                 <Route path='/' exact component={Home} />
-                <Route path='/index.html' exact component={Home} />
                 <Route path='/about' component={About} />
-                <Route path='/Social' exact component={Social} />
-                <Route path='/Resume' exact component={Resume} />
+                <Route path='/Social' component={Social} />
+                <Route path='/Resume' component={Resume} />
             </Switch>
         </div>
     );
