@@ -12,14 +12,13 @@ export default function App() {
                 <div className="left-section">
                     <SectionChild>
                         <div className="rounded-img">
-                            <img src="/src/images/samyouaret-cropped.jpg" className="img" />
+                            <img src="/src/images/ouaretsamy-cropped.png" className="img" />
                         </div>
                     </SectionChild>
                 </div>
                 <div className="right-section">
+                    <h1>The website is under construction</h1>
                     <SectionChild>
-                        <h2 className="flex flex-column">Samy Ouaret</h2>
-                        <strong className="text-muted">Web developer, PHP programmer, React lover</strong>
                         <ContentBrowser />
                     </SectionChild>
                 </div>

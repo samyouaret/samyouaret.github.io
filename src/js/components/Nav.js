@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 function Nav() {
    return (
       <nav className="menu">
-         <Link to="/" className="brand">Ouaret Samy</Link>
+         <Link to="/" className="brand">
+            <img src="/src/images/ouaretsamy-cropped.png" className="brand-img" />
+            Ouaret Samy
+         </Link>
          <div className="links">
             <Link to="/about">About</Link>
             <Link to="/social">Social</Link>
