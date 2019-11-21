@@ -6,7 +6,7 @@ function Nav() {
       <nav className="menu">
          <Link to="/" className="brand">
             <img src="/src/images/ouaretsamy-cropped.png" className="brand-img" />
-            Ouaret Samy
+            Samy Ouaret
          </Link>
          <div className="links">
             <Link to="/resume">Resume</Link>
