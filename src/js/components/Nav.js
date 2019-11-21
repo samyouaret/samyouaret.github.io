@@ -9,9 +9,8 @@ function Nav() {
             Ouaret Samy
          </Link>
          <div className="links">
-            <Link to="/about">About</Link>
-            <Link to="/writings">Writings</Link>
             <Link to="/resume">Resume</Link>
+            <Link to="/writings">Writings</Link>
             <Link to="/getintouch">Get in touch</Link>
          </div>
       </nav>
