@@ -19,7 +19,7 @@ export default function App() {
                 <div className="left-section">
                     <ChildSection>
                         <div className="rounded-img">
-                            <img src="/src/images/ouaretsamy-cropped.png" className="img" />
+                            <img src="/images/ouaretsamy-cropped.png" className="img" />
                         </div>
                         <h2 className="flex flex-column text-center">Samy Ouaret</h2>
                         <strong className="text">Web developer, PHP programmer, React lover</strong>

@@ -1,0 +1,11 @@
+---
+layout: base.liquid
+permalink : "blog/{{ date | slugifyDate }}/{{ title | slugify }}/index.html"
+---
+
+{% if title %}
+<h1>{{title}}</h1>
+{% endif %}
+author: <a href="{{author.twitterLink}}">{{author.name}} </a>
+{{ content | safe }}
+<style>{{ css | cssmin | safe }}</style>

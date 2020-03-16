@@ -4,9 +4,15 @@
   "description": "a simple theme for a single personal page",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server && webpack --w",
-    "watch": "webpack --w",
+    "buildreact": "webpack",
+    "startreact": "webpack-dev-server && webpack --w",
+    "watchreact": "webpack --w",
+    "buildcss": "postcss src/css/**/*.css --base --dir public/build/css",
+    "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch",
+    "buildeleventy": "eleventy",
+    "watcheleventy": "eleventy --watch",
+    "serveeleventy": "eleventy --serve",
+    "debugeleventy": "DEBUG=* eleventy",
     "deploy": "gh-pages -d build"
   },
   "repository": {
@@ -35,10 +41,21 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "gh-pages": "^2.1.1",
-    "html-webpack-plugin": "^3.2.0",
     "sass-loader": "^8.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
+    "@11ty/eleventy": "^0.10.0",
+    "clean-css": "^4.2.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "slugify": "^1.4.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7"
   }
 }
