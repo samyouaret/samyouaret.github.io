@@ -7,7 +7,7 @@
     "buildreact": "webpack",
     "startreact": "webpack-dev-server && webpack --w",
     "watchreact": "webpack --w",
-    "buildcss": "postcss src/css/**/*.css --base --dir public/build/css",
+    "buildcss": "postcss src/css/*.css --base --dir public/build/css",
     "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch",
     "buildeleventy": "eleventy",
     "watcheleventy": "eleventy --watch",

@@ -7,7 +7,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -70358,4 +70358,23 @@ video {
   .xl\:duration-1000 {
     transition-duration: 1000ms;
   }
+}
+
+.footer {
+  padding: 2%;
+  background-color: #e2e2e2;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.footer a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #566368;
+  transition: ease 0.2s;
+}
+
+.footer a:hover {
+  color: #2d9dc9;
 }
