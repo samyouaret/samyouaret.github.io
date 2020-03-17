@@ -23,7 +23,7 @@ export default function App() {
                         </div>
                     </Section>
                 </div>
-                <div className="md:w-2/3 sm:w-full sm:ml-4 mx-4">
+                <div className="w-full md:ml-4 md:w-2/3">
                     <Section>
                         <ContentBrowser />
                     </Section>
