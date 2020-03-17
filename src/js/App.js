@@ -15,16 +15,15 @@ export default function App() {
     return (<Router>
         <div className="app">
             <Nav />
-            <div className="flex my-16">
-                <div className="w-1/3 mx-4">
+            <div className="flex flex-col md:flex-row my-16">
+                <div className="md:w-1/3 w-full sm:mr-4 mb-8">
                     <Section>
-                        <div className="rounded">
-                            <img src="/images/ouaretsamy-cropped.png" className="max-w-xs rounded" />
+                        <div className="rounded mx-auto">
+                            <img src="/images/ouaretsamy-cropped.png" className="max-w-full rounded-lg shadow-lg" />
                         </div>
                     </Section>
-                    
                 </div>
-                <div className="w-2/3 mx-4">
+                <div className="md:w-2/3 sm:w-full sm:ml-4 mx-4">
                     <Section>
                         <ContentBrowser />
                     </Section>
