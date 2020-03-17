@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Contact() {
-  return (<div>
+  return (<div className="text-center md:text-left">
     <h2 className="text-2xl text-gray-800 mb-3">Get in touch with me</h2>
     <p className="text-lg text-gray-900 m-3">You may contact me on:</p>
     <div class="flex flex-col">

@@ -19,7 +19,7 @@ export default function App() {
                 <div className="md:w-1/3 w-full sm:mr-4 mb-8">
                     <Section>
                         <div className="rounded mx-auto">
-                            <img src="/images/ouaretsamy-cropped.png" className="max-w-full rounded-lg shadow-lg" />
+                            <img src="/images/ouaretsamy-cropped.png" className="max-w-xs rounded-full shadow-lg md:max-w-full md:rounded-lg" />
                         </div>
                     </Section>
                 </div>
