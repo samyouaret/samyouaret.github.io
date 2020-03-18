@@ -1,11 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>{{page_title}}</title>
+    <title>{{page_title or title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Samy Ouaret">
+    <meta name="description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta name="keywords" content="Samy Ouaret,Samy,Ouaret,web developer,React,PHP,Algeria">
+    <meta property="og:title" content="Samy Ouaret">
+    <meta property="og:site_name" content="Samy Ouaret personal website">
+    <meta property="og:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta property="og:image" content="/images/ouaretsamy-cropped.png">
+    <meta property="og:url" content="https://ouaretsamy.com">
+    <meta property="twitter:title" content="Samy Ouaret">
+    <meta property="twitter:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta property="twitter:image" content="/images/ouaretsamy-cropped.png">
+    <meta property="twitter:card" content="/images/ouaretsamy-cropped.png">
+    <meta name="twitter:site" content="@samyouaret13">
+    <meta name="twitter:image:alt" content="Samy Ouaret blog">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <meta name="theme-color" content="#5089a2">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/a4efe37a32.js"></script>
+    {% if style %}
+    <link rel="stylesheet" href="{{style}}">
+    {% endif %}
+    <link rel="stylesheet" href="/build/css/tailwind.css">
 </head>
-<body>
-<main>
- {{content}}
-</main>
+
+<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
+    <div id="app" class="p-5 mt-20 bg-white">
+    {{content}}
+    </div>
+        <!--footer-->
+    <div class="justify-center p-12 text-center flex flex-col">
+        <div class="flex-row">
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="https://twitter.com/samyouaret13"><i
+                    class="fa fa-twitter"></i></a>
+            <a class="p-3 text-2xl text-gray-700 hover:text-gray-900" href="https://github.com/samyouaret"> <i
+                    class="fa fa-github"></i></a>
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-600" href="https://www.linkedin.com/in/samyouaret"><i
+                    class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="pt-6 pb-2 text-lg">
+            This site is built with
+            <a class="text-gray-700 hover:text-gray-900" href="https://www.11ty.dev/">11ty</a>, <a
+                class="text-gray-700 hover:text-gray-900" href="https://reactjs.org">ReactJS</a>,
+            <a class="text-gray-700 hover:text-gray-900" href="https://tailwindcss.com/">TailwindCss</a>, and hosted by
+            <a class="text-gray-700 hover:text-gray-900" href="https://netlify.com/"> Netlify</a>.
+        </div>
+    </div>
+
+{% if script %}
+  <script src="{{script}}"></script>
+{% endif %}
 </body>
 </html>

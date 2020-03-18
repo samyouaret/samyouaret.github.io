@@ -1,5 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-
+const { DateTime } = require("luxon");
 // use my markdown library to parse markdown an not depend on liquid
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -10,6 +10,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLiquidOptions({
         dynamicPartials: true
     });
+    // when changing input must specify input directory when copying files **eleventy
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.jpg": "blog/images" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.png": "blog/images" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.gif": "blog/images" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.css": "blog/images" });
     // add plugin to build rss feed
     eleventyConfig.addPlugin(pluginRss);
 
@@ -34,10 +39,7 @@ module.exports = function (eleventyConfig) {
             .replace(/[^\w ]+/g, '')
             .replace(/ +/g, '-').trim("-")
     });
-
     eleventyConfig.setDynamicPermalinks(true);
-    eleventyConfig.addPassthroughCopy("build");
-    eleventyConfig.addPassthroughCopy("images");
 
     eleventyConfig.addFilter("slugifyDate", function (dateObj) {
         let year = dateObj.getFullYear();
@@ -46,8 +48,12 @@ module.exports = function (eleventyConfig) {
         return `${year}/${month}/${date}`;
     });
 
+    eleventyConfig.addFilter("readableDate", dateObj => {
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
+    });
+
     eleventyConfig.addCollection("myPosts", function (collection) {
-        console.log(collection.getAll());
+        // console.log(collection.getAll());
         return [];
     });
     // merge local data and global data ,default local ovverdie global data

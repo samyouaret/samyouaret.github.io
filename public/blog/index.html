@@ -1,19 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Samy Ouaret Blog</title>
+    <title>Samy Ouaret Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Samy Ouaret">
+    <meta name="description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta name="keywords" content="Samy Ouaret,Samy,Ouaret,web developer,React,PHP,Algeria">
+    <meta property="og:title" content="Samy Ouaret">
+    <meta property="og:site_name" content="Samy Ouaret personal website">
+    <meta property="og:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta property="og:image" content="/images/ouaretsamy-cropped.png">
+    <meta property="og:url" content="https://ouaretsamy.com">
+    <meta property="twitter:title" content="Samy Ouaret">
+    <meta property="twitter:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta property="twitter:image" content="/images/ouaretsamy-cropped.png">
+    <meta property="twitter:card" content="/images/ouaretsamy-cropped.png">
+    <meta name="twitter:site" content="@samyouaret13">
+    <meta name="twitter:image:alt" content="Samy Ouaret blog">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <meta name="theme-color" content="#5089a2">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/a4efe37a32.js"></script>
+    
+    <link rel="stylesheet" href="/build/css/tailwind.css">
 </head>
-<body>
-<main>
- 
 
-<h1>Welcome to Samy Ouaret blog</h1>
+<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
+    <div id="app" class="p-5 mt-20 bg-white">
+    <div class="mx-auto">
+<nav class="flex">
+    <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
+    <div class="flex flex-col ml-3">
+        <h3 class="font-semibold text-xl text-gray-800">Samy Ouaret</h3>
+        <p class="text-lg text-gray-700">
+            Web developer, PHP enthusiast, React developer
+        </p>
+    </div>
+</nav>
+<div class="flex flex-col my-6 p-3">
 
+<h1 class="font-bold text-4xl text-gray-800 mb-4">Welcome to Samy Ouaret blog</h1>
 
-author: <a href="https://twitter.com/samyouaret">samyouaret13 </a>
-<ul>
-<li><a href="/blog/2020/3/10/workcation-get-your-place-now-/">Workcation get your place now !</a></li>
-</ul>
+<div class="flex flex-col">
+<div class="flex flex-col">
+<time class="text-lg font-semibold text-gray-700">10 Mar 2020</time>
+<a href="/blog/2020/3/10/workcation-get-your-place-now-/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">Workcation get your place now !</a><br>
+</div>
+</div>
 <nav aria-labelledby="my-pagination">
 <h2 id="my-pagination">This is my Pagination</h2>
 <ol>
@@ -24,7 +63,29 @@ Previous
 Next
 </li>
 </ol>
-<style></style>
-</main>
+</nav>
+</div>
+</div>
+    </div>
+        <!--footer-->
+    <div class="justify-center p-12 text-center flex flex-col">
+        <div class="flex-row">
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="https://twitter.com/samyouaret13"><i
+                    class="fa fa-twitter"></i></a>
+            <a class="p-3 text-2xl text-gray-700 hover:text-gray-900" href="https://github.com/samyouaret"> <i
+                    class="fa fa-github"></i></a>
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-600" href="https://www.linkedin.com/in/samyouaret"><i
+                    class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="pt-6 pb-2 text-lg">
+            This site is built with
+            <a class="text-gray-700 hover:text-gray-900" href="https://www.11ty.dev/">11ty</a>, <a
+                class="text-gray-700 hover:text-gray-900" href="https://reactjs.org">ReactJS</a>,
+            <a class="text-gray-700 hover:text-gray-900" href="https://tailwindcss.com/">TailwindCss</a>, and hosted by
+            <a class="text-gray-700 hover:text-gray-900" href="https://netlify.com/"> Netlify</a>.
+        </div>
+    </div>
+
+
 </body>
 </html>

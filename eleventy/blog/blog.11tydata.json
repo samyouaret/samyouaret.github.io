@@ -1,8 +1,4 @@
 {
     "layout": "post.njk",
-    "tags": "blog",
-    "author": {
-        "name": "samyouaret13",
-        "twitterLink": "https://twitter.com/samyouaret"
-    }
+    "tags": "blog"
 }

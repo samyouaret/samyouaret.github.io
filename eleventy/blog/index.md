@@ -9,9 +9,14 @@ pagination:
   alias: blogs
 ---
 
+<div class="flex flex-col">
 {%- for blog in blogs %}
-- [{{blog.data.title}}]({{blog.url}})
+<div class="flex flex-col">
+<time class="text-lg font-semibold text-gray-700">{{blog.date | readableDate}}</time>
+<a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">{{blog.data.title}}</a><br>
+</div>
 {% endfor %}
+</div>
 
 <nav aria-labelledby="my-pagination">
 <h2 id="my-pagination">This is my Pagination</h2>
@@ -27,3 +32,4 @@ pagination:
 {% else %}Next{% endif %}
 </li>
 </ol>
+</nav>

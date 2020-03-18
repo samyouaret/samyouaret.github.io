@@ -1,11 +1,20 @@
 ---
 layout: base.liquid
 ---
-
+<div class="mx-auto">
+<nav class="flex">
+    <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
+    <div class="flex flex-col ml-3">
+        <h3 class="font-semibold text-xl text-gray-800">Samy Ouaret</h3>
+        <p class="text-lg text-gray-700">
+            Web developer, PHP enthusiast, React developer
+        </p>
+    </div>
+</nav>
+<div class="flex flex-col my-6 p-3">
 {% if title %}
-<h1>{{title}}</h1>
+<h1 class="font-bold text-4xl text-gray-800 mb-4">{{title}}</h1>
 {% endif %}
-
-author: <a href="{{author.twitterLink}}">{{author.name}} </a>
-{{ content | safe }}
-<style>{{ css | cssmin | safe }}</style>
+{{ content }}
+</div>
+</div>
