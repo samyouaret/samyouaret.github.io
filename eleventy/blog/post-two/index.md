@@ -1,10 +1,11 @@
 ---
-title : Workcation get your place now !
-date: 2020-03-10
-image : /blog/images/beach-work.jpg
+title : What about leaving the town
+date: 2020-03-18
 layout : post.njk
+image : /blog/images/beach-work.jpg
 ---
-<img src="/blog/images/beach-work.jpg"  class="my-4 mx-auto" width="500" height="400">
+
+{{'what up ?' | makeUppercase}}
 
 1. First ordered list item
 2. Another item

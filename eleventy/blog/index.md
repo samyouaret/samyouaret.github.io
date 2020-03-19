@@ -1,35 +1,40 @@
 ---
 tags: no
-title: Welcome to Samy Ouaret blog
-layout: layout.liquid
+title: Articles
+layout: blog_layout.njk
 page_title: Samy Ouaret Blog
+style : /build/css/tailwind.css
+templateClass : flex flex-col items-center
 pagination:
   data: collections.blog
   size: 2
   alias: blogs
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col sm:flex-row">
 {%- for blog in blogs %}
-<div class="flex flex-col">
-<time class="text-lg font-semibold text-gray-700">{{blog.date | readableDate}}</time>
-<a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">{{blog.data.title}}</a><br>
-</div>
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 sm:w-1/2">
+   <a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <time class="text-sm font-semibold text-gray-700">{{blog.date | readableDate}}</time><br>
+   {{blog.data.title}}
+   <img src="{{ blog.data.image }}"  class="max-w-xs max-h-xs my-2 rounded-lg">
+   </a><br>
+   <a href="{{blog.url}}" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
+   read</a><br>
+   </div>
 {% endfor %}
 </div>
 
 <nav aria-labelledby="my-pagination">
-<h2 id="my-pagination">This is my Pagination</h2>
-<ol>
-<li>
-{% if pagination.href.previous %}
- <a href="{{ pagination.href.previous }}">Previous</a>
-{% else %}Previous{% endif %}
-</li>
-<li>
-{% if pagination.href.next %}
- <a href="{{ pagination.href.next }}">Next</a>
-{% else %}Next{% endif %}
-</li>
-</ol>
+  <ol class="my-8 flex flex-row justify-between">
+   <li>
+   {% if pagination.href.previous %}
+   <a href="{{ pagination.href.previous }}" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Previous page</a>
+   {% endif %}
+   </li>
+   {% if pagination.href.next %}
+   <a href="{{ pagination.href.next }}" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Next page</a>
+   {% endif %}
+   </li>
+  </ol>
 </nav>

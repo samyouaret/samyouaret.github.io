@@ -1,11 +1,12 @@
 ---
 layout: base.liquid
 ---
-<div class="mx-auto">
+<div id="app" class="p-5 mt-20 {{templateClass | safe}}">
 <nav class="flex">
     <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
     <div class="flex flex-col ml-3">
-        <h3 class="font-semibold text-xl text-gray-800">Samy Ouaret</h3>
+        <h3 class="font-semibold text-xl text-gray-800">
+         <a href="/">Samy Ouaret</a></h3>
         <p class="text-lg text-gray-700">
             Web developer, PHP enthusiast, React developer
         </p>
@@ -13,8 +14,8 @@ layout: base.liquid
 </nav>
 <div class="flex flex-col my-6 p-3">
 {% if title %}
-<h1 class="font-bold text-4xl text-gray-800 mb-4">{{title}}</h1>
+<h1 class="font-bold text-3xl text-gray-800 mb-4">{{title}}</h1>
 {% endif %}
-{{ content }}
-</div>
+<div>
+{{ content | safe }}
 </div>

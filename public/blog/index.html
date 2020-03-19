@@ -29,15 +29,16 @@
     <script src="https://use.fontawesome.com/a4efe37a32.js"></script>
     
     <link rel="stylesheet" href="/build/css/tailwind.css">
+    
 </head>
 
 <body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
-    <div id="app" class="p-5 mt-20 bg-white">
-    <div class="mx-auto">
+    <div id="app" class="p-5 mt-20 flex flex-col items-center">
 <nav class="flex">
     <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
     <div class="flex flex-col ml-3">
-        <h3 class="font-semibold text-xl text-gray-800">Samy Ouaret</h3>
+        <h3 class="font-semibold text-xl text-gray-800">
+         <a href="/">Samy Ouaret</a></h3>
         <p class="text-lg text-gray-700">
             Web developer, PHP enthusiast, React developer
         </p>
@@ -45,30 +46,40 @@
 </nav>
 <div class="flex flex-col my-6 p-3">
 
-<h1 class="font-bold text-4xl text-gray-800 mb-4">Welcome to Samy Ouaret blog</h1>
+<h1 class="font-bold text-3xl text-gray-800 mb-4">Articles</h1>
 
-<div class="flex flex-col">
-<div class="flex flex-col">
-<time class="text-lg font-semibold text-gray-700">10 Mar 2020</time>
-<a href="/blog/2020/3/10/workcation-get-your-place-now-/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">Workcation get your place now !</a><br>
-</div>
+<div>
+<div class="flex flex-col sm:flex-row">
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 sm:w-1/2">
+   <a href="/blog/2020/3/10/workcation-get-your-place-now-/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <time class="text-sm font-semibold text-gray-700">10 Mar 2020</time><br>
+   Workcation get your place now !
+   <img src="/blog/images/beach-work.jpg"  class="max-w-xs max-h-xs my-2 rounded-lg">
+   </a><br>
+   <a href="/blog/2020/3/10/workcation-get-your-place-now-/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
+   read</a><br>
+   </div>
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 sm:w-1/2">
+   <a href="/blog/2020/3/18/the-ultimate-guid-to-php-standard-library-spl/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <time class="text-sm font-semibold text-gray-700">18 Mar 2020</time><br>
+   The ultimate guid to PHP standard library (SPL)
+   <img src="/blog/images/php.png"  class="max-w-xs max-h-xs my-2 rounded-lg">
+   </a><br>
+   <a href="/blog/2020/3/18/the-ultimate-guid-to-php-standard-library-spl/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
+   read</a><br>
+   </div>
 </div>
 <nav aria-labelledby="my-pagination">
-<h2 id="my-pagination">This is my Pagination</h2>
-<ol>
-<li>
-Previous
-</li>
-<li>
-Next
-</li>
-</ol>
+  <ol class="my-8 flex flex-row justify-between">
+   <li>
+   </li>
+<p><a href="/blog/1/" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Next page</a></p>
+   </li>
+  </ol>
 </nav>
 </div>
-</div>
-    </div>
         <!--footer-->
-    <div class="justify-center p-12 text-center flex flex-col">
+    <div class="p-12 text-center flex flex-col">
         <div class="flex-row">
             <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="https://twitter.com/samyouaret13"><i
                     class="fa fa-twitter"></i></a>

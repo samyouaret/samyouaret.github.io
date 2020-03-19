@@ -2,7 +2,7 @@ import React from 'react';
 
 function Resume() {
     return (
-        <div class="content">
+        <div className="content">
             <p className="p-4 border-gray-100 border-b-2 text-lg">
                 Hi, I’m Samy Ouaret I'm a Web Developer, I live currently in Algeria.
                     I have a BSc in Computer Science, and  I study an MSc in Computer Networking and Multimedia.
