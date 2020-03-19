@@ -2,12 +2,17 @@ module.exports = {
     plugins: [
         require('tailwindcss'),
         require('autoprefixer'),
-        process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
+        require('@fullhuman/postcss-purgecss')({
             content: [
-                './public/index.html',
-                './src/js/**/*.js'
+                './src/js/**/*.js',
+                './src/js/*.js',
+                './eleventy/_includes/*.njk',
+                './eleventy/*.md',
+                './eleventy/**/*.md',
+                './eleventy/_includes/*.liquid',
+                './eleventy/_includes/*.liquid',
             ],
-            defaultExtractor: content => content.match(/[A-Za-z0-9-_:]+/g) || []
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
         }),
     ]
 }

@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // webpack built-in optimization is close to both results
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports = {
     mode: "development",
     entry: path.join(__dirname, "/src/js/index.js"),
@@ -19,7 +20,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.js$/,
+                test: /.js|jsx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",

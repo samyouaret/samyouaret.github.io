@@ -1,56 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-
-.btn {
-    @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold;
-}
-
-.btn:focus {
-    @apply outline-none shadow-outline;
-}
-
-.btn-indigo {
-    @apply bg-indigo-500 text-white;
-}
-
-.btn-indigo:hover {
-    @apply bg-indigo-400;
-}
-
-.btn-indigo:active {
-    @apply bg-indigo-600;
-}
-
-.btn-gray {
-    @apply bg-gray-400 text-gray-800;
-}
-
-.btn-gray:hover {
-    @apply bg-gray-300;
-}
-
-.btn-gray:active {
-    @apply bg-gray-500;
-}
+/* purgecss end ignore */
 
 @tailwind utilities;
-
-.footer {
-    padding: 2%;
-    background-color: #e2e2e2;
-    align-items: center;
-    margin-top: 3%;
-}
-
-.footer a {
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1.5rem;
-    color: #566368;
-    transition: ease 0.2s;
-}
-
-.footer a:hover {
-    color: #2d9dc9;
-}
