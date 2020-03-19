@@ -4,20 +4,20 @@ title: Articles
 layout: blog_layout.njk
 page_title: Samy Ouaret Blog
 style : /build/css/tailwind.css
-templateClass : flex flex-col items-center
+templateClass : flex flex-col
 pagination:
   data: collections.blog
   size: 2
   alias: blogs
 ---
 
-<div class="flex flex-col sm:flex-row">
+<div class="flex flex-col md:flex-row">
 {%- for blog in blogs %}
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 sm:w-1/2">
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 md:w-1/2">
    <a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
    <time class="text-sm font-semibold text-gray-700">{{blog.date | readableDate}}</time><br>
    {{blog.data.title}}
-   <img src="{{ blog.data.image }}"  class="max-w-xs max-h-xs my-2 rounded-lg">
+   <img src="{{ blog.data.image }}"  class="w-full max-h-xs my-2 rounded-lg">
    </a><br>
    <a href="{{blog.url}}" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
    read</a><br>
