@@ -1,5 +1,5 @@
 ---
-title : Workcation get your place now !
+title : Workcation^%4 get& & your place now !
 date: 2020-03-10
 image : /blog/images/beach-work.jpg
 layout : post.njk

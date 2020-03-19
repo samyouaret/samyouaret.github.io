@@ -37,7 +37,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("slugify", function (value) {
         return value.toLowerCase()
             .replace(/[^\w ]+/g, '')
-            .replace(/ +/g, '-').trim("-")
+            .trim("")
+            .replace(/ +/g, '-');
     });
     eleventyConfig.setDynamicPermalinks(true);
 
