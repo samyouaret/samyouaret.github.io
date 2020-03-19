@@ -1,2 +1,5 @@
 node_modules
 package-lock.json
+/eleventy/blog/images
+/eleventy/blog/**/*.jpg
+/eleventy/blog/**/*.png
