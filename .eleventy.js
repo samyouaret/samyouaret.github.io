@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
         let year = dateObj.getFullYear();
         let date = dateObj.getUTCDate();
         let month = dateObj.getUTCMonth() + 1;
-        return `${year}/${month}/${date}`;
+        return `${year}-${month}-${date}`;
     });
 
     eleventyConfig.addFilter("readableDate", dateObj => {
