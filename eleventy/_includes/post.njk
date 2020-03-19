@@ -4,6 +4,11 @@ permalink : "blog/{{ date | slugifyDate }}/{{ title | slugify }}/index.html"
 style : /build/css/tailwind.css
 templateClass:
 ---
-<div class="flex flex-col mb-3 p-3">
+<div class="flex flex-col mt-6 pl-3">
+{% if title %}
+<h1 class="font-bold text-3xl text-gray-800 p-2">{{title}}</h1>
+<time class="text-lg text-gray-700 pl-6">published on {{ date | readableDate}}</time>
+<hr class="my-3">
+{% endif %}
 {{ content | safe }}
 </div>

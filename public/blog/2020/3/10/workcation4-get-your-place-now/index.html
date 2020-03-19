@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Samy Ouaret Blog</title>
+    <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,7 +33,7 @@
 </head>
 
 <body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
-    <div id="app" class="p-5 mt-20 flex flex-col">
+    <div id="app" class="p-5 mt-20 ">
 <nav class="flex">
     <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
     <div class="flex flex-col ml-3">
@@ -44,35 +44,36 @@
         </p>
     </div>
 </nav>
-<h1 class="font-bold text-3xl text-gray-800 mt-6 pl-3">Articles</h1>
-<div class="flex flex-col md:flex-row">
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 md:w-1/2">
-   <a href="/blog/2020/3/10/workcation4-get-your-place-now/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
-   <time class="text-sm font-semibold text-gray-700">10 Mar 2020</time><br>
-   Workcation^%4 get& & your place now !
-   <img src="/blog/images/beach-work.jpg"  class="w-full max-h-xs my-2 rounded-lg">
-   </a><br>
-   <a href="/blog/2020/3/10/workcation4-get-your-place-now/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
-   read</a><br>
-   </div>
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 md:w-1/2">
-   <a href="/blog/2020/3/18/the-ultimate-guid-to-php-standard-library-spl/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
-   <time class="text-sm font-semibold text-gray-700">18 Mar 2020</time><br>
-   The ultimate guid to PHP standard library (SPL)
-   <img src="/blog/images/php.png"  class="w-full max-h-xs my-2 rounded-lg">
-   </a><br>
-   <a href="/blog/2020/3/18/the-ultimate-guid-to-php-standard-library-spl/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
-   read</a><br>
-   </div>
+<div class="flex flex-col mt-6 pl-3">
+
+<h1 class="font-bold text-3xl text-gray-800 p-2">Workcation^%4 get&amp; &amp; your place now !</h1>
+<time class="text-lg text-gray-700 pl-6">published on 10 Mar 2020</time>
+<hr class="my-3">
+
+<img src="/blog/images/beach-work.jpg"  class="my-4 mx-auto" width="500" height="400">
+<ol>
+<li>First ordered list item</li>
+<li>Another item<br>
+⋅⋅* Unordered sub-list.</li>
+<li>Actual numbers don't matter, just that it's a number<br>
+⋅⋅1. Ordered sub-list</li>
+<li>And another item.</li>
+</ol>
+<p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅<br>
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅<br>
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+<ul>
+<li>Unordered list can use asterisks</li>
+</ul>
+<ul>
+<li>Or minuses</li>
+</ul>
+<ul>
+<li>Or pluses</li>
+</ul>
+
 </div>
-<nav aria-labelledby="my-pagination">
-  <ol class="my-8 flex flex-row justify-between">
-   <li>
-   </li>
-<p><a href="/blog/1/" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Next page</a></p>
-   </li>
-  </ol>
-</nav>
 </div>
         <!--footer-->
     <div class="p-12 text-center flex flex-col">

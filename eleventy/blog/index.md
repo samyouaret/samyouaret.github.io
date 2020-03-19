@@ -1,6 +1,5 @@
 ---
 tags: no
-title: Articles
 layout: blog_layout.njk
 page_title: Samy Ouaret Blog
 style : /build/css/tailwind.css
@@ -10,7 +9,7 @@ pagination:
   size: 2
   alias: blogs
 ---
-
+<h1 class="font-bold text-3xl text-gray-800 mt-6 pl-3">Articles</h1>
 <div class="flex flex-col md:flex-row">
 {%- for blog in blogs %}
    <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 md:w-1/2">
