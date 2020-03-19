@@ -4,7 +4,7 @@
   "description": "a simple theme for a single personal page",
   "main": "index.js",
   "scripts": {
-    "buildreact": "webpack",
+    "buildreact": "webpack --mode=production",
     "startreact": "webpack-dev-server && webpack --w",
     "watchreact": "webpack --w",
     "buildcss": "postcss src/css/*.css --base --dir public/build/css",
@@ -56,6 +56,8 @@
     "slugify": "^1.4.0",
     "style-loader": "^1.1.3",
     "tailwindcss": "^1.2.0",
+    "terser-webpack-plugin": "^2.3.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"

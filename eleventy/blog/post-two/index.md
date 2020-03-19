@@ -1,7 +1,6 @@
 ---
 title : What about leaving the town
 date: 2020-03-18
-layout : post.njk
 image : /blog/images/beach-work.jpg
 ---
 

@@ -4,6 +4,7 @@ layout: blog_layout.njk
 page_title: Samy Ouaret Blog
 style : /build/css/tailwind.css
 templateClass : flex flex-col
+home : /
 pagination:
   data: collections.blog
   size: 2

@@ -2,7 +2,8 @@
 layout: base.liquid
 ---
 <div id="app" class="p-5 mt-20 {{templateClass | safe}}">
-<nav class="flex">
+<nav class="flex flex-col sm:flex-row justify-between">
+    <div class="flex ml-3">
     <img src="/images/ouaretsamy-cropped.png" class="w-20 h-20 rounded-full"/>
     <div class="flex flex-col ml-3">
         <h3 class="font-semibold text-xl text-gray-800">
@@ -11,6 +12,12 @@ layout: base.liquid
             Web developer, PHP enthusiast, React developer
         </p>
     </div>
+    </div>
+    {% if home == "/blog" %} 
+    <a class='text-gray-800 font-semibold text-lg leading-2 px-3 hover:text-blue-600 mt-3' href="/blog">Articles</a>
+    {% else %} 
+    <a class='text-gray-800 font-semibold text-lg leading-2 px-3 hover:text-blue-600 mt-3' href="/">Home</a>
+    {% endif %}
 </nav>
 {{ content | safe }}
 </div>

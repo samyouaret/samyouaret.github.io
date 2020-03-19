@@ -1,8 +1,16 @@
 const path = require("path")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// both have same results 
+// webpack built-in optimization is close to both results
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: path.join(__dirname, "/src/js/index.js"),
+    optimization: {
+        // minimizer: [new UglifyJsPlugin()],
+        minimizer: [new TerserPlugin()],
+    },
     output: {
         filename: "bundle.js",
         path: path.join(__dirname, "/public/build/js/"),

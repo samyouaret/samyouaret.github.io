@@ -1,7 +1,6 @@
 ---
 title : The ultimate guid to PHP standard library (SPL)
 date: 2020-03-18
-layout : post.njk
 image : /blog/images/php.png
 ---
 
