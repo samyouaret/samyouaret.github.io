@@ -13,11 +13,12 @@ module.exports = {
             content: [
                 './src/js/**/*.js',
                 './src/js/*.js',
-                './eleventy/_includes/*.njk',
+                './eleventy/*.njk',
+                './eleventy/*.liquid',
                 './eleventy/*.md',
-                './eleventy/**/*.md',
-                './eleventy/**/*.liquid',
                 './eleventy/**/*.njk',
+                './eleventy/**/*.liquid',
+                './eleventy/**/*.md',
             ],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
         }),
