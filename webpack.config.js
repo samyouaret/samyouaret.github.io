@@ -1,5 +1,4 @@
 const path = require("path")
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // both have same results 
 // webpack built-in optimization is close to both results
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -35,18 +34,10 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
-                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    'css-loader', 'postcss-loader'
+                    'style-loader',
+                    'css-loader'
                 ],
             }
         ]
     },
-    devServer: {
-        historyApiFallback: true,
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '/public/build/css/[name].css'
-        }),
-    ],
 }
