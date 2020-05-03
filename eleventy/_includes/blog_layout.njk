@@ -14,9 +14,12 @@ layout: base.liquid
     </div>
     </div>
     {% if home == "/blog" %} 
-    <a class='text-gray-800 font-semibold text-lg leading-2 px-3 hover:text-blue-600 mt-3' href="/blog">Articles</a>
-    {% else %} 
-    <a class='text-gray-800 font-semibold text-lg leading-2 px-3 hover:text-blue-600 mt-3' href="/">Home</a>
+    <a class='text-gray-800 font-semibold text-lg leading-2 px-3
+     hover:text-blue-600 mt-3'
+     href="/blog">Articles</a>
+    {% else %}
+    <a class='text-gray-800 font-semibold text-lg leading-2 px-3
+     hover text-blue-600 mt-3' href="/">Home</a>
     {% endif %}
 </nav>
 {{ content | safe }}

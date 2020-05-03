@@ -10,14 +10,14 @@ pagination:
   size: 2
   alias: blogs
 ---
-<h1 class="font-bold text-3xl text-gray-800 mt-6 pl-3">Articles</h1>
-<div class="flex flex-col md:flex-row">
+<h3 class="font-bold text-2xl text-gray-800 mt-6 pl-3">Articles</h3>
+<div class="flex flex-col">
 {%- for blog in blogs %}
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2 md:w-1/2">
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2">
    <a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
    <time class="text-sm font-semibold text-gray-700">{{blog.date | readableDate}}</time><br>
    {{blog.data.title}}
-   <img src="{{ blog.data.image }}"  class="w-full max-h-xs my-2 rounded-lg">
+   <!-- <img src="{{ blog.data.image }}"  class="w-full max-h-xs my-2 rounded-lg"> -->
    </a><br>
    <a href="{{blog.url}}" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
    read</a><br>

@@ -1,7 +1,9 @@
 ---
 title : What about leaving the town
-date: 2020-03-18
+date: 2020-03-15
 image : /blog/images/beach-work.jpg
+tags : 
+  - two
 ---
 
 {{'what up ?' | makeUppercase}}
