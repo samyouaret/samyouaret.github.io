@@ -3,12 +3,8 @@ module.exports = {
     // every thing put it in extend will be merger with full config
     // every thing outside will override default config property
     extend: {
-      colors: {
-        'brand-blue': '#1992d4'
-      },
-      spacing: {
-        '72': '18rem',
-      }
+      colors: {},
+      spacing: {}
     },
   },
   // all about focus ,hover,active responsive like sm lg md

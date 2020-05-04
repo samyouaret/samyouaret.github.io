@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="Samy Ouaret personal website">
     <meta property="og:description" content="{{metadata.description}}">
     <meta property="og:image" content="{{metadata.author.image_md}}">
-    <meta property="og:url" content="https://ouaretsamy.com">
+    <meta property="og:url" content="{{metadata.url}}">
     <meta property="twitter:title" content="{{metadata.author.name}}">
     <meta property="twitter:description" content="{{metadata.description}}">
     <meta property="twitter:image" content="{{metadata.author.image_md}}">
@@ -38,7 +38,7 @@
     {% endif %}
 </head>
 
-<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
+<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen"  style="min-height:400px">
     {{content}}
         <!--footer-->
     <div class="p-12 text-center flex flex-col">

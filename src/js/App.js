@@ -4,13 +4,6 @@ import ContentBrowser from './components/ContentBrowser';
 import Section from './components/Section';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-//Your initialization
-function locationHashChanged(e) {
-    console.log(location.hash);
-    console.log(e.oldURL, e.newURL);
-}
-window.onhashchange = locationHashChanged;
-
 export default function App() {
     return (<Router>
         <div className="app">

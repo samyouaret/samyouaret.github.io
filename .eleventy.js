@@ -4,7 +4,6 @@ const { DateTime } = require("luxon");
 // use my markdown library to parse markdown an not depend on liquid
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const fs = require("fs");
 const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
@@ -41,14 +40,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code);
     });
-    // Minify Theme
-    eleventyConfig.addFilter("cssTheme", function (urlOrCode) {
-        let minified = "";
-        fs.readFileSync(urlOrCode,(err,content)=>{
-            minified =  CleanCSS({}).minify(code);
-        });
-        return minified;
-    });
 
     // Get the first `n` elements of a collection.
     eleventyConfig.addFilter("head", (array, n) => {
@@ -67,17 +58,17 @@ module.exports = function (eleventyConfig) {
             .replace(/ +/g, '-');
     });
 
-    eleventyConfig.addFilter("logger", function (value) {
+    eleventyConfig.addFilter("dump", function (value) {
         console.log(value);
     });
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+        return DateTime.fromJSDate(dateObj, { zone: 'utc+1' }).toFormat('yyyy-LL-dd');
     });
 
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
+        return DateTime.fromJSDate(dateObj, { zone: 'utc+1' }).toFormat("LLL, dd yyyy");
     });
 
     // eleventyConfig.addCollection("myPosts", function (collection) {

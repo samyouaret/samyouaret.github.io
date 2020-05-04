@@ -5,13 +5,13 @@ style : /build/css/tailwind.css
 templateClass:
 home : /blog
 ---
-<div class="flex flex-col mt-6 pl-3">
+<article class="flex flex-col mt-6 p-2">
 {% if title %}
-<h1 class="font-bold text-4xl text-gray-800 p-2">{{title}}</h1>
-<time class="text-md font-bold text-gray-700 pl-6 my-3">{{ date | readableDate}}</time>
+<h1 class="font-bold text-4xl text-gray-800">{{title}}</h1>
+<time class="text-md text-gray-700 ml-2 mt-2">{{ date | readableDate}}</time>
 {% endif %}
-<article class="text-lg text-gray-900 leading-loose">
+<section class="text-lg text-gray-800 leading-loose mt-6">
 {{ content | safe }}
+</section>
 </article>
-</div>
 <link rel="stylesheet" href="/build/css/theme.css">

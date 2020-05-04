@@ -4,7 +4,7 @@
   "description": "personal blog of Samy Ouaret",
   "main": "src/js/index.js",
   "scripts": {
-    "buildreact": "webpack --mode=vproduction",
+    "buildreact": "webpack --mode=production",
     "watchreact": "webpack --w --mode=development",
     "buildcss": "postcss src/css/*.css --base --dir public/build/css --env=prod",
     "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch --env=dev",

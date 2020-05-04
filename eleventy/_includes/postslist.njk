@@ -1,6 +1,6 @@
-<div class="flex flex-col">
+<div class="flex flex-col mt-6 ml-3">
 {%- for post in posts | reverse %}
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2">
+   <div class="flex flex-col border-b border-dashed border-b-gray-300">
    <a href="{{post.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
    <time class="text-sm font-semibold text-gray-700">{{post.date | readableDate}}</time><br>
    {{post.data.title}}
