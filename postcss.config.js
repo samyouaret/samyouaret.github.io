@@ -1,7 +1,7 @@
 module.exports = (options) => {
     let isDevMode = options.env.includes('dev');
 
-    if (!isDevMode && !options.env.includes('prod') > -1) {
+    if (!isDevMode && !options.env.includes('prod')) {
         throw Error('invalid mode provided');
     }
     let plugins = [

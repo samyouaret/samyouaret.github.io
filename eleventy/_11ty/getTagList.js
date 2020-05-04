@@ -1,8 +1,6 @@
 module.exports = function (collection) {
     let tagSet = new Set();
-    // console.log("collection : ");
     // console.log(collection.getAll());
-    
     collection.getAll().forEach(function (item) {
         if ("tags" in item.data) {
             let tags = item.data.tags;
@@ -13,7 +11,8 @@ module.exports = function (collection) {
                     case "all":
                     case "nav":
                     case "post":
-                    case "blog":
+                    case "posts":
+                    case "no":
                         return false;
                 }
 
@@ -26,6 +25,5 @@ module.exports = function (collection) {
     });
 
     // returning an array in addCollection works in Eleventy 0.5.3
-    console.log([...tagSet]);
     return [...tagSet];
 };

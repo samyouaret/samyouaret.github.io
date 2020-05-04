@@ -1,13 +1,19 @@
 ---
 permalink: /tags/
+title: Samy Ouaret Blog | Topics
 layout: blog_layout.njk
 style : /build/css/tailwind.css
 templateClass : flex flex-col
-home : /tags
 ---
-<h1>Tags</h1>
-
+<div class="flex flex-col mt-6 pl-3 items-center">
+<h1 class="m-3 text-2xl text-gray-800">Read about: </h1>
+</hr>
+<div class="mt-4 ml-4">
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+  <a href="{{ tagUrl | url }}" 
+  class="p-2 text-md border rounded-lg border-gray-300 text-gray-700 
+  hover:text-blue-600">#{{ tag }}</a>
 {% endfor %}
+</div>
+</div>

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% if renderData.title %}
+  {% assign title = renderData.title %}
+{% elsif title %}
+  {% assign title = title %}
+{% else %}
+  {% assign title = metadata.title %}
+{% endif %}
 <head>
-    <title>{% if page_title %} {{page_title}} {% else %} {{title}} {% endif %}</title>
+   <title>{{title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Samy Ouaret">
-    <meta name="description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
+    <meta name="description" content="{{metadata.description}}">
     <meta name="keywords" content="Samy Ouaret,Samy,Ouaret,web developer,React,PHP,Algeria">
     <meta property="og:title" content="Samy Ouaret">
     <meta property="og:site_name" content="Samy Ouaret personal website">
-    <meta property="og:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
-    <meta property="og:image" content="https://ouaretsamy.me/images/samyouaret400x400.jpg">
+    <meta property="og:description" content="{{metadata.description}}">
+    <meta property="og:image" content="{{metadata.author.image_md}}">
     <meta property="og:url" content="https://ouaretsamy.com">
-    <meta property="twitter:title" content="Samy Ouaret">
-    <meta property="twitter:description" content="Samy Ouaret is a PHP, React developer, web enthusiast.">
-    <meta property="twitter:image" content="https://ouaretsamy.me/images/samyouaret400x400.jpg">
-    <meta property="twitter:card" content="https://ouaretsamy.me/images/samyouaret400x400.jpg">
+    <meta property="twitter:title" content="{{metadata.author.name}}">
+    <meta property="twitter:description" content="{{metadata.description}}">
+    <meta property="twitter:image" content="{{metadata.author.image_md}}">
+    <meta property="twitter:card" content="{{metadata.author.image_md}}">
     <meta name="twitter:site" content="@samyouaret13">
     <meta name="twitter:image:alt" content="Samy Ouaret blog">
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
@@ -37,11 +43,11 @@
         <!--footer-->
     <div class="p-12 text-center flex flex-col">
         <div class="flex-row">
-            <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="https://twitter.com/samyouaret13"><i
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="{{metadata.links.twitter}}"><i
                     class="fa fa-twitter"></i></a>
-            <a class="p-3 text-2xl text-gray-700 hover:text-gray-900" href="https://github.com/samyouaret"> <i
+            <a class="p-3 text-2xl text-gray-700 hover:text-gray-900" href="{{metadata.links.github}}"> <i
                     class="fa fa-github"></i></a>
-            <a class="p-3 text-2xl text-gray-700 hover:text-blue-600" href="https://www.linkedin.com/in/samyouaret"><i
+            <a class="p-3 text-2xl text-gray-700 hover:text-blue-600" href="{{metadata.links.linkedin}}"><i
                     class="fa fa-linkedin"></i></a>
         </div>
         <div class="pt-6 pb-2 text-lg">

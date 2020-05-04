@@ -4,7 +4,7 @@
   
 
 <head>
-   <title>Samy Ouaret</title>
+   <title>Samy Ouaret Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,8 +35,62 @@
 </head>
 
 <body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen">
+    <div id="app" class="p-5 mt-20 flex flex-col">
+<nav class="nav">
+    <div class="flex">
+    <img src="/images/samyouaret150x150.jpg" class="w-20 h-20 rounded-full"/>
+    <div class="flex flex-col ml-3">
+        <h3 class="font-semibold text-xl text-gray-800">
+         <a href="/">Samy Ouaret</a></h3>
+        <p class="text-sm md:text-lg text-gray-700">
+           Samy Ouaret, a PHP, React developer, web enthusiast.
+        </p>
+    </div>
+    </div>
+    <div class="flex">
+    <a class='nav-item' href="/tags">Topics</a>
     
-<div id="app" class="p-5 mt-20 bg-white"></div>
+    
+    <a class='nav-item' href="/">Home</a>
+    <div>
+</nav>
+
+<h3 class="font-bold text-2xl text-gray-800 mt-6 pl-3">Articles</h3>
+
+<div class="flex flex-col">
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2">
+   <a href="/blog/some_other-post/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <time class="text-sm font-semibold text-gray-700">03 Apr 2020</time><br>
+   some_other post
+   </a><br>
+   <a href="/blog/some_other-post/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
+   read</a><br>
+   </div>
+
+   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2">
+   <a href="/blog/the-ultimate-guid-to-php-standard-library-spl/" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <time class="text-sm font-semibold text-gray-700">18 Mar 2020</time><br>
+   The ultimate guid to PHP standard library (SPL)
+   </a><br>
+   <a href="/blog/the-ultimate-guid-to-php-standard-library-spl/" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
+   read</a><br>
+   </div>
+
+</div>
+<nav aria-labelledby="my-pagination">
+  <ol class="my-8 flex flex-row justify-between">
+   <li>
+   
+   <a href="/blog/" class="page-prev">Previous page</a>
+   
+   </li>
+   
+   <a href="/blog/2/" class="page-next">Next page</a>
+   
+   </li>
+  </ol>
+</nav>
+</div>
         <!--footer-->
     <div class="p-12 text-center flex flex-col">
         <div class="flex-row">
@@ -56,8 +110,6 @@
         </div>
     </div>
 
-
-  <script src="/build/js/bundle.js"></script>
 
 </body>
 </html>

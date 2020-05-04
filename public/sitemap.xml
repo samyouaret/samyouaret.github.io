@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ouaretsamy.me/</loc>
+    <lastmod>1970-01-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/tags/</loc>
+    <lastmod>1970-01-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/tags/one/</loc>
+    <lastmod>1970-01-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/tags/two/</loc>
+    <lastmod>1970-01-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/tags/three/</loc>
+    <lastmod>1970-01-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/blog/workcation4-get-your-place-now/</loc>
+    <lastmod>2020-03-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/blog/what-about-leaving-the-town/</loc>
+    <lastmod>2020-03-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/blog/the-ultimate-guid-to-php-standard-library-spl/</loc>
+    <lastmod>2020-03-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/blog/some_other-post/</loc>
+    <lastmod>2020-04-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ouaretsamy.me/blog/some-post-out-there/</loc>
+    <lastmod>2020-04-05</lastmod>
+  </url>
+</urlset>

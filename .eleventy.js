@@ -1,10 +1,10 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
 // use my markdown library to parse markdown an not depend on liquid
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const fs = require("fs");
 const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
@@ -12,24 +12,20 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLiquidOptions({
         dynamicPartials: true
     });
+    // variables will be parsed inside permalink string
+    eleventyConfig.setDynamicPermalinks(true);
+    // merge local data and global data ,default local ovverdie global data
+    eleventyConfig.setDataDeepMerge(true);
+    // add syntax parser and highlighter form markdown 
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
+    // add plugin to build rss feed
     eleventyConfig.addPlugin(pluginRss);
-    eleventyConfig.addPlugin(pluginNavigation);
+    // eleventyConfig.addPlugin(pluginNavigation);
     // when changing input must specify input directory when copying files **eleventy
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.jpg": "blog/images" });
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.png": "blog/images" });
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.gif": "blog/images" });
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.css": "blog/images" });
-    // add plugin to build rss feed
-    // Get the first `n` elements of a collection.
-    eleventyConfig.addFilter("head", (array, n) => {
-        if (n < 0) {
-            return array.slice(n);
-        }
-
-        return array.slice(0, n);
-    });
-
     // add markdown parsers
     let options = {
         html: true,
@@ -45,6 +41,24 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code);
     });
+    // Minify Theme
+    eleventyConfig.addFilter("cssTheme", function (urlOrCode) {
+        let minified = "";
+        fs.readFileSync(urlOrCode,(err,content)=>{
+            minified =  CleanCSS({}).minify(code);
+        });
+        return minified;
+    });
+
+    // Get the first `n` elements of a collection.
+    eleventyConfig.addFilter("head", (array, n) => {
+        if (n < 0) {
+            return array.slice(n);
+        }
+
+        return array.slice(0, n);
+    });
+
     // make fereindly url
     eleventyConfig.addFilter("slugify", function (value) {
         return value.toLowerCase()
@@ -55,19 +69,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("logger", function (value) {
         console.log(value);
-    });
-    
-    eleventyConfig.addFilter("type", function (value) {
-        console.log(typeof value);
-    });
-
-    eleventyConfig.setDynamicPermalinks(true);
-
-    eleventyConfig.addFilter("slugifyDate", function (dateObj) {
-        let year = dateObj.getFullYear();
-        let date = dateObj.getUTCDate();
-        let month = dateObj.getUTCMonth() + 1;
-        return `${year}-${month}-${date}`;
     });
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -83,10 +84,9 @@ module.exports = function (eleventyConfig) {
     //     console.log(collection.getAll());
     //     return [];
     // });
-
+    // add a collection will be accessible form collections.TagList
     eleventyConfig.addCollection("tagList", require("./eleventy/_11ty/getTagList"));
-    // merge local data and global data ,default local ovverdie global data
-    // eleventyConfig.setDataDeepMerge(true);
+
     return {
         templateFormats: [
             "md",
@@ -98,7 +98,6 @@ module.exports = function (eleventyConfig) {
         htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",
 
-        // These are all optional, defaults are shown:
         dir: {
             input: "eleventy",
             includes: "_includes",

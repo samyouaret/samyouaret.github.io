@@ -1,39 +1,29 @@
 ---
-tags: no
+eleventyExcludeFromCollections: true
+tags: posts
 layout: blog_layout.njk
-page_title: Samy Ouaret Blog
-style : /build/css/tailwind.css
-templateClass : flex flex-col
-home : /
+title: Samy Ouaret Blog
+style: /build/css/tailwind.css
+templateClass: flex flex-col
+blogHome: /blog
 pagination:
-  data: collections.blog
+  data: collections.posts
   size: 2
-  alias: blogs
+  alias: posts
 ---
-<h3 class="font-bold text-2xl text-gray-800 mt-6 pl-3">Articles</h3>
-<div class="flex flex-col">
-{%- for blog in blogs %}
-   <div class="flex flex-col my-1 border-b border-dashed border-b-gray-300 p-2">
-   <a href="{{blog.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
-   <time class="text-sm font-semibold text-gray-700">{{blog.date | readableDate}}</time><br>
-   {{blog.data.title}}
-   <!-- <img src="{{ blog.data.image }}"  class="w-full max-h-xs my-2 rounded-lg"> -->
-   </a><br>
-   <a href="{{blog.url}}" class="text-lg my-2 text-gray-800 underline hover:text-gray-900">
-   read</a><br>
-   </div>
-{% endfor %}
-</div>
 
+<h3 class="font-bold text-2xl text-gray-800 mt-6 pl-3">Articles</h3>
+
+{% include "postslist.njk" %}
 <nav aria-labelledby="my-pagination">
   <ol class="my-8 flex flex-row justify-between">
    <li>
    {% if pagination.href.previous %}
-   <a href="{{ pagination.href.previous }}" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Previous page</a>
+   <a href="{{ pagination.href.previous }}" class="page-prev">Previous page</a>
    {% endif %}
    </li>
    {% if pagination.href.next %}
-   <a href="{{ pagination.href.next }}" class="block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg hover:bg-white">Next page</a>
+   <a href="{{ pagination.href.next }}" class="page-next">Next page</a>
    {% endif %}
    </li>
   </ol>

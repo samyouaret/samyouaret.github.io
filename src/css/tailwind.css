@@ -3,4 +3,33 @@
 @tailwind components;
 /* purgecss end ignore */
 
+.nav {
+    @apply flex flex-col items-center;
+}
+
+@screen sm {
+    .nav {
+        @apply flex-row justify-between;
+    }
+}
+
+.nav-item {
+    @apply text-gray-900 font-semibold text-lg p-3;
+}
+
+.nav-item:hover {
+    @apply text-blue-600;
+}
+
+.page-next,
+.page-prev {
+    @apply block rounded-sm py-1 px-2 bg-gray-100 border border-gray-300 text-gray-900 text-lg;
+}
+
+.page-next :hover,
+.page-prev :hover {
+    @apply text-blue-600;
+}
+
+
 @tailwind utilities;

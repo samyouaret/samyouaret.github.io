@@ -1,0 +1,22 @@
+{
+  "title": "Samy Ouaret",
+  "url": "https://ouaretsamy.me",
+  "description": "Samy Ouaret, a PHP, React developer, web enthusiast.",
+  "feed": {
+    "subtitle": "Samy Ouaret, a PHP, React developer, web enthusiast.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://ouaretsamy.me/"
+  },
+  "author": {
+    "name": "Samy Ouaret",
+    "image_sm": "/images/samyouaret150x150.jpg",
+    "image_md": "/images/samyouaret400x400.jpg",
+    "description": "Samy Ouaret, a PHP, React developer, web enthusiast."
+  },
+  "links": {
+    "twitter": "https://twitter.com/samyouaret13",
+    "github": "https://github.com/samyouaret",
+    "linkedin": "https://www.linkedin.com/in/samyouaret"
+  }
+}

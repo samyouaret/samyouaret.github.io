@@ -1,18 +1,18 @@
 {
-  "name": "ouaret-samy-theme",
+  "name": "ouaret-samy-blog",
   "version": "1.0.0",
-  "description": "a simple theme for a single personal page",
+  "description": "personal blog of Samy Ouaret",
   "main": "src/js/index.js",
   "scripts": {
-    "buildreact": "webpack --mode=prod",
-    "watchreact": "webpack --w --mode=dev",
-    "buildcss": "postcss src/css/*.css --base --dir public/build/css --env=dev",
-    "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch",
+    "buildreact": "webpack --mode=vproduction",
+    "watchreact": "webpack --w --mode=development",
+    "buildcss": "postcss src/css/*.css --base --dir public/build/css --env=prod",
+    "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch --env=dev",
     "watcheleventy": "eleventy --watch",
     "serveeleventy": "eleventy --serve",
     "debugeleventy": "DEBUG=* eleventy",
-    "buildeleventy": "eleventy --mode=production",
-    "deploy": "webpack --mode=production & postcss src/css/*.css --base --dir public/build/css"
+    "buildeleventy": "eleventy",
+    "deploy": "webpack --mode=production & postcss src/css/*.css --base --dir public/build/css --env=prod & eleventy"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-navigation": "^0.1.5",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.5.5",
@@ -50,7 +49,6 @@
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5",
     "postcss-cli": "^7.1.0",
-    "slugify": "^1.4.0",
     "style-loader": "^1.1.3",
     "tailwindcss": "^1.2.0",
     "terser-webpack-plugin": "^2.3.5",
