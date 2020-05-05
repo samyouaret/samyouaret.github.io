@@ -17,12 +17,12 @@
   </url>
   
   <url>
-    <loc>https://ouaretsamy.me/tags/two/</loc>
+    <loc>https://ouaretsamy.me/tags/one/</loc>
     <lastmod>1970-01-01</lastmod>
   </url>
   
   <url>
-    <loc>https://ouaretsamy.me/tags/one/</loc>
+    <loc>https://ouaretsamy.me/tags/two/</loc>
     <lastmod>1970-01-01</lastmod>
   </url>
   
@@ -47,12 +47,12 @@
   </url>
   
   <url>
-    <loc>https://ouaretsamy.me/blog/some_other-post/</loc>
-    <lastmod>2020-04-03</lastmod>
+    <loc>https://ouaretsamy.me/blog/some-other-post/</loc>
+    <lastmod>2020-04-02</lastmod>
   </url>
   
   <url>
     <loc>https://ouaretsamy.me/blog/some-post-out-there/</loc>
-    <lastmod>2020-04-05</lastmod>
+    <lastmod>2020-04-03</lastmod>
   </url>
 </urlset>

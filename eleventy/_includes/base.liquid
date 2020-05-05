@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-{% if renderData.title %}
-  {% assign title = renderData.title %}
-{% elsif title %}
-  {% assign title = title %}
-{% else %}
-  {% assign title = metadata.title %}
-{% endif %}
+{%-  if renderData.title -%}
+  {%-  assign title = renderData.title -%}
+{%- elsif title -%}
+  {%- assign title = title -%}
+{%- else -%}
+  {%- assign title = metadata.title -%}
+{%- endif -%}
 <head>
    <title>{{title}}</title>
     <meta charset="UTF-8">
@@ -31,9 +31,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#5089a2">
-    {% if style %}
+    {%-  if style -%}
     <link rel="stylesheet" href="{{style}}">
-    {% endif %}
+    {%-  endif -%}
 </head>
 
 <body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen"  style="min-height:400px">
@@ -57,9 +57,9 @@
         </div>
     </div>
 
-{% if script %}
+{%-  if script -%}
   <script src="{{script}}"></script>
-{% endif %}
+{%-  endif -%}
     <link defer href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/a4efe37a32.js"></script>
 </body>

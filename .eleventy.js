@@ -40,19 +40,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code);
     });
-
-    // Get the first `n` elements of a collection.
-    eleventyConfig.addFilter("head", (array, n) => {
-        if (n < 0) {
-            return array.slice(n);
-        }
-
-        return array.slice(0, n);
-    });
-
-    // make fereindly url
+    
+    // make feriendly url
     eleventyConfig.addFilter("slugify", function (value) {
         return value.toLowerCase()
+            .replace(/_+/g, ' ')
             .replace(/[^\w ]+/g, '')
             .trim("")
             .replace(/ +/g, '-');
@@ -71,10 +63,10 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj, { zone: 'utc+1' }).toFormat("LLL, dd yyyy");
     });
 
-    // eleventyConfig.addCollection("myPosts", function (collection) {
-    //     console.log(collection.getAll());
-    //     return [];
-    // });
+    eleventyConfig.addFilter("utcDate", timestamp => {
+        return (new Date(timestamp)).toUTCString()
+    });
+
     // add a collection will be accessible form collections.TagList
     eleventyConfig.addCollection("tagList", require("./eleventy/_11ty/getTagList"));
 

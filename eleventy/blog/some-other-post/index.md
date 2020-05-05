@@ -1,6 +1,6 @@
 ---
-title : some_other post
-date: 2020-04-03
+title : some__other post__
+date: 2020-04-02
 tags : two
 ---
 

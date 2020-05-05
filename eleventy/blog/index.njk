@@ -5,13 +5,12 @@ layout: blog_layout.njk
 title: Samy Ouaret Blog
 style: /build/css/tailwind.css
 templateClass: flex flex-col
-blogHome: /blog
 pagination:
   data: collections.posts
-  size: 2
+  size: 3
+  reverse: true
   alias: posts
 ---
-
 {% include "postslist.njk" %}
 <nav aria-labelledby="my-pagination">
   <ol class="my-8 flex flex-row justify-between">
@@ -20,6 +19,7 @@ pagination:
    <a href="{{ pagination.href.previous }}" class="page-prev">Previous page</a>
    {% endif %}
    </li>
+    <li>
    {% if pagination.href.next %}
    <a href="{{ pagination.href.next }}" class="page-next">Next page</a>
    {% endif %}
