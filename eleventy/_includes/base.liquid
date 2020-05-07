@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+{%- assign ogtype = "article" -%}
+{%-  if page.url == "/blog" or page.url == "/" -%}
+  {%- assign ogtype = "website" -%}
+{%- endif -%}
+
 {%-  if renderData.title -%}
-  {%-  assign title = renderData.title -%}
-{%- elsif title -%}
-  {%- assign title = title -%}
-{%- else -%}
+  {%- assign title = renderData.title -%}
+{%- elsif  title == nil -%}
   {%- assign title = metadata.title -%}
 {%- endif -%}
+
+{%-  if renderData.description -%}
+  {%- assign description = renderData.description -%}
+{%- elsif description == nil -%}
+  {%- assign description = metadata.description -%}
+{%- endif -%}
+
+{%-  if image == nil -%}
+  {%- assign image = metadata.author.image_md -%}
+{%- endif -%}
+
 <head>
    <title>{{title}}</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Samy Ouaret">
-    <meta name="description" content="{{metadata.description}}">
+    <meta name="author" content="{{metadata.author.name}}">
+    <meta name="description" content="{{description}}">
     <meta name="keywords" content="Samy Ouaret,Samy,Ouaret,web developer,React,PHP,Algeria">
-    <meta property="og:title" content="Samy Ouaret">
-    <meta property="og:site_name" content="Samy Ouaret personal website">
-    <meta property="og:description" content="{{metadata.description}}">
-    <meta property="og:image" content="{{metadata.author.image_md}}">
-    <meta property="og:url" content="{{metadata.url}}">
+    <!-- open graph -->    
+    <meta property="og:site_name" content="{{metadata.author.name}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:image" content="{{metadata.url}}{{image}}">
+    <meta property="og:type" content="{{ogtype}}">
+    <meta property="og:url" content="{{metadata.url}}{{page.url}}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="{{description}}">
+     <!-- twitter -->
     <meta property="twitter:title" content="{{metadata.author.name}}">
     <meta property="twitter:description" content="{{metadata.description}}">
-    <meta property="twitter:image" content="{{metadata.author.image_md}}">
-    <meta property="twitter:card" content="{{metadata.author.image_md}}">
+    <meta property="twitter:image" content="{{metadata.url}}{{image}}">
+    <meta property="twitter:card" content="{{metadata.url}}{{image}}">
+
     <meta name="twitter:site" content="@samyouaret13">
-    <meta name="twitter:image:alt" content="Samy Ouaret blog">
+    <meta name="twitter:creator" content="@samyouaret13">
+    
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <meta name="theme-color" content="#5089a2">
+    <meta name="theme-color" content="#41bff0">
     {%-  if style -%}
     <link rel="stylesheet" href="{{style}}">
     {%-  endif -%}

@@ -1,6 +1,7 @@
 ---
 title : some__other post__
 date: 2020-04-02
+description: Leverage agile frameworks to provide a robust synopsis for high level overviews.
 tags : two
 ---
 

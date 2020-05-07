@@ -2,6 +2,7 @@
 title : The ultimate guid to PHP standard library (SPL)
 date: 2020-03-18
 image : /blog/images/php.png
+description: Leverage agile frameworks to provide a robust synopsis for high level overviews. 
 tags : 
   - three
   - two

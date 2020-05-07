@@ -2,6 +2,7 @@
 title : What about leaving the town
 date: 2020-03-15
 image : /blog/images/beach-work.jpg
+description: Leverage agile frameworks to provide a robust synopsis for high level overviews. 
 tags : 
   - two
 ---
