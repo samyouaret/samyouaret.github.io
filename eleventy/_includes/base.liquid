@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+{{page.url}}
 {%- assign ogtype = "article" -%}
-{%-  if page.url == "/blog" or page.url == "/" -%}
+{%- assign twitterCard = "summary_large_image" -%}
+{%-  if page.url == "/blog/" or page.url == "/" -%}
+  {%- assign twitterCard = "summary" -%}
   {%- assign ogtype = "website" -%}
 {%- endif -%}
 
@@ -42,7 +45,7 @@
     <meta property="twitter:title" content="{{metadata.author.name}}">
     <meta property="twitter:description" content="{{metadata.description}}">
     <meta property="twitter:image" content="{{metadata.url}}{{image}}">
-    <meta property="twitter:card" content="{{metadata.url}}{{image}}">
+    <meta property="twitter:card" content="{{twitterCard}}">
 
     <meta name="twitter:site" content="@samyouaret13">
     <meta name="twitter:creator" content="@samyouaret13">
