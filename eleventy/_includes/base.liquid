@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{{page.url}}
 {%- assign ogtype = "article" -%}
 {%- assign twitterCard = "summary_large_image" -%}
 {%-  if page.url == "/blog/" or page.url == "/" -%}
@@ -46,6 +45,7 @@
     <meta property="twitter:description" content="{{metadata.description}}">
     <meta property="twitter:image" content="{{metadata.url}}{{image}}">
     <meta property="twitter:card" content="{{twitterCard}}">
+    <meta property="twitter:description" content="{{description}}">
 
     <meta name="twitter:site" content="@samyouaret13">
     <meta name="twitter:creator" content="@samyouaret13">
