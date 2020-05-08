@@ -3,8 +3,9 @@ title : What about leaving the town
 date: 2020-03-15
 image : /blog/images/beach-work.jpg
 description: Leverage agile frameworks to provide a robust synopsis for high level overviews. 
-tags : 
+tags : &topics
   - two
+topics : *topics
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

@@ -10,11 +10,23 @@ home : /blog
 <h1 class="font-bold text-4xl text-gray-800">{{title}}</h1>
 <time class="text-md text-gray-700 ml-2 mt-2">{{ date | readableDate}}</time>
 {% endif %}
-<section class="text-lg text-gray-800 leading-loose mt-6">
+<section class="text-gray-900 leading-relaxed mt-6" style="font-size: 1.15rem;"> 
+{% if image %}
+<img defer src="{{image}}" alt= "{{title}}"  class="my-4 mx-auto max-w-full"/>
+{% endif %}
 {{ content | safe }}
 </section>
+<div class="mt-6">
+{%- if topics -%}
+{%- for topic in topics -%}
+  {%- capture tagUrl -%}/tags/{{ topic }}/{%- endcapture -%}
+  <a href="{{ tagUrl | url }}" 
+  class="px-2 py-1 text-md border rounded-sm border-gray-400 text-gray-700 
+  hover:text-blue-700 bg-blue-100 mr-1">{{ topic }}</a>
+{%- endfor -%}
+{%- endif -%}
+</div>
 </article>
-<link rel="stylesheet" href="/build/css/theme.css">
  <div class="my-3 p-2">
  <span class="text-lg text-gray-700 mr-2">Share </span>
         {%- capture postUrl -%}{{metadata.url}}{{page.url}}{%- endcapture -%}
@@ -28,3 +40,4 @@ home : /blog
         href="https://www.facebook.com/sharer/sharer.php?u={{postUrl}}">
         <i class="fa fa-facebook"></i></a>
 </div>
+<link defer rel="stylesheet" href="/build/css/theme.css">
