@@ -18,11 +18,9 @@
 {%- elsif description == nil -%}
   {%- assign description = metadata.description -%}
 {%- endif -%}
-
 {%-  if image == nil -%}
   {%- assign image = metadata.author.image_md -%}
 {%- endif -%}
-
 <head>
    <title>{{title}}</title>
     <meta charset="UTF-8">
@@ -36,6 +34,7 @@
     <meta property="og:site_name" content="{{metadata.author.name}}">
     <meta property="og:title" content="{{title}}">
     <meta property="og:image" content="{{metadata.url}}{{image}}">
+    <meta property="og:image:alt" content="{{title}}">
     <meta property="og:type" content="{{ogtype}}">
     <meta property="og:url" content="{{metadata.url}}{{page.url}}">
     <meta property="og:locale" content="en_US">
