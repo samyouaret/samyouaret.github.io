@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code);
     });
-    
+
     // make feriendly url
     eleventyConfig.addFilter("slugify", function (value) {
         return value.toLowerCase()
@@ -52,6 +52,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("dump", function (value) {
         console.log(value);
+    });
+
+    eleventyConfig.addFilter("trimSlashes", function (value) {
+        return value.replace(/^\/|\/$/g, '');;
     });
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
