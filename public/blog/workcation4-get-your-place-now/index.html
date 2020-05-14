@@ -42,7 +42,7 @@
         <h3 class="font-semibold text-xl text-gray-800">
          <a href="/">Samy Ouaret</a>
         </h3>
-        <p class="text-sm md:text-lg text-gray-700">
+        <p class="text-lg text-gray-700">
            Samy Ouaret, a PHP, React developer, web enthusiast.
         </p>
     </div>
@@ -66,10 +66,10 @@
 
 </section>
 <div class="mt-6"><a href="/tags/one/" 
-  class="px-2 py-1 text-md border rounded-sm border-gray-400 text-gray-700 
-  hover:text-blue-700 bg-blue-100 mr-1">one</a><a href="/tags/two/" 
-  class="px-2 py-1 text-md border rounded-sm border-gray-400 text-gray-700 
-  hover:text-blue-700 bg-blue-100 mr-1">two</a></div>
+  class="px-2 py-1 text-md  rounded-sm text-gray-700 
+  hover:bg-gray-200 bg-gray-300 mr-1">one</a><a href="/tags/two/" 
+  class="px-2 py-1 text-md  rounded-sm text-gray-700 
+  hover:bg-gray-200 bg-gray-300 mr-1">two</a></div>
 </article>
  <div class="my-3 p-2">
  <span class="text-lg text-gray-700 mr-2">Share </span><a class="bg-blue-400 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed" 
@@ -82,9 +82,9 @@
         href="https://www.facebook.com/sharer/sharer.php?u=https://ouaretsamy.me/blog/workcation4-get-your-place-now/">
         <i class="fa fa-facebook"></i></a>
 </div>
-<button class="p-2 bg-gray-300 rounded-sm text-lg text-gray-700  text-center" 
+<button id="load-comment" class="px-2 py-1 bg-gray-300 rounded-sm text-lg text-gray-700" 
 onclick="loadComments()">comments</button></a>
-<div id="disqus_thread" class="mt-6"></div>
+<div id="disqus_thread" class="mt-8"></div>
 <script>
 var disqus_config = function () {
 this.page.url = "https://ouaretsamy.me/blog/workcation4-get-your-place-now/";  
@@ -93,8 +93,10 @@ this.page.identifier = "blog/workcation4-get-your-place-now";
 function loadComments() {
 var d = document, s = d.createElement('script');
 s.src = 'https://samyouaret.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
+s.setAttribute('data-timestamp', + new Date());
 (d.head || d.body).appendChild(s);
+var commentBtn = document.getElementById('load-comment');
+commentBtn.style.display = "none";
 }
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
