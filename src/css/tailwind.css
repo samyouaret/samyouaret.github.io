@@ -4,7 +4,7 @@
 /* purgecss end ignore */
 
 .nav {
-    @apply flex items-center;
+    @apply flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }

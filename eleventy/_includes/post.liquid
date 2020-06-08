@@ -7,10 +7,12 @@ home : /blog
 ---
 <article class="flex flex-col mt-6 p-2">
 {% if title %}
+<section class="my-2">
 <h1 class="font-bold text-4xl text-gray-800">{{title}}</h1>
-<time class="text-md text-gray-700 ml-2 mt-2">{{ date | readableDate}}</time>
+<time class="text-md text-gray-700 ml-2 mt-1">{{ date | readableDate}}</time>
+</section>
 {% endif %}
-<section class="text-gray-900 leading-relaxed mt-6" style="font-size: 1.15rem;"> 
+<section class="text-gray-800 leading-relaxed mt-4" style="font-size: 1.15rem;"> 
 {% if image %}
 <img defer src="{{image}}" alt= "{{title}}"  class="my-4 mx-auto max-w-full"/>
 {% endif %}
