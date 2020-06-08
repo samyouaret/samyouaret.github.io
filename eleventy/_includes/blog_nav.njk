@@ -1,5 +1,5 @@
 <nav class="nav">
-   <div class="flex">
+   <div class="flex" style="max-width:80%">
     <img src="{{metadata.author.image_sm}}" class="w-20 h-20 rounded-full"/>
     <div class="flex flex-col ml-3">
         <h3 class="font-semibold text-xl text-gray-800">
@@ -10,9 +10,35 @@
         </p>
     </div>
     </div>
-    <div class="flex">
+     <div class="nav-toggler">
+               <span class='toggler-bar'></span>
+               <span class='toggler-bar'></span>
+               <span class='toggler-bar'></span>
+     </div>
+    <div class="nav-links" data-collapsed="true">
     <a class='nav-item' href="/tags">Topics</a>
     <a class='nav-item' href="/blog">Blog</a>
     <a class='nav-item' href="/">About</a>
     <div>
 </nav>
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function (e) {
+    e.preventDefault();
+    var toggler = document.querySelector('.nav-toggler');
+    toggler.addEventListener('click', function (e) {
+        var links = document.querySelector('.nav-links');
+        var collapsed = links.getAttribute('data-collapsed');
+        if (collapsed === "true") {
+            links.style.height = "auto";
+            links.style.overflow = 'auto';
+             links.setAttribute('data-collapsed','false');
+        } else {
+            links.style.height = 0;
+            links.style.overflow = 'hidden';
+             links.setAttribute('data-collapsed','true');
+        }
+    })
+});
+
+</script>
