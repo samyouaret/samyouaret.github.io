@@ -12,7 +12,7 @@ export default function App() {
                 <div className="md:w-1/3 w-full sm:mr-4 mb-8">
                     <Section>
                         <div className="rounded mx-auto">
-                            <img src="/images/samyouaret450x450.jpg" style={{ maxWidth: "auto" }}
+                            <img src="/images/samyouaret450x450-min.jpg"
                                 className="rounded-full shadow-lg md:max-w-full md:rounded-lg" />
                         </div>
                     </Section>
