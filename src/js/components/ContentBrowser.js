@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 import Resume from './Resume';
 import Contact from './Contact';
@@ -11,6 +11,9 @@ function ContentBrowser() {
                 <Route path='/' exact component={Home} />
                 <Route path='/resume' component={Resume} />
                 <Route path='/getintouch' component={Contact} />
+                <Route>
+                    <Redirect to="/404" />
+                </Route>
             </Switch>
         </div>
     );
