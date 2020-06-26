@@ -11,9 +11,7 @@ function ContentBrowser() {
                 <Route path='/' exact component={Home} />
                 <Route path='/resume' component={Resume} />
                 <Route path='/getintouch' component={Contact} />
-                <Route>
-                    <Redirect to="/404" />
-                </Route>
+                <Redirect to="/404" />
             </Switch>
         </div>
     );
