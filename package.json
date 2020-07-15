@@ -1,18 +1,16 @@
 {
   "name": "ouaret-samy-blog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "personal blog of Samy Ouaret",
   "main": "src/js/index.js",
   "scripts": {
-    "buildreact": "webpack --mode=production",
-    "watchreact": "webpack --w --mode=development",
     "buildcss": "postcss src/css/*.css --base --dir public/build/css --env=prod",
     "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch --env=dev",
     "watcheleventy": "eleventy --watch",
     "serveeleventy": "eleventy --serve",
     "debugeleventy": "DEBUG=* eleventy",
     "buildeleventy": "eleventy",
-    "deploy": "webpack --mode=production & postcss src/css/*.css --base --dir public/build/css --env=prod & eleventy"
+    "build": "postcss src/css/*.css --base --dir public/build/css --env=prod & eleventy"
   },
   "repository": {
     "type": "git",
@@ -20,8 +18,7 @@
   },
   "keywords": [
     "Ouaret Samy",
-    "personal portfolio",
-    "single page application"
+    "personal portfolio"
   ],
   "author": "Ouaret Samy",
   "license": "MIT",
@@ -29,30 +26,16 @@
     "url": "https://github.com/samyouaret/samyouaret.github.io/issues"
   },
   "homepage": "https://github.com/samyouaret/samyouaret.github.io",
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
-  },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5",
     "postcss-cli": "^7.1.0",
-    "style-loader": "^1.1.3",
-    "tailwindcss": "^1.2.0",
-    "terser-webpack-plugin": "^2.3.5",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "tailwindcss": "^1.2.0"
   }
 }

@@ -43,7 +43,7 @@
          <a href="/">Samy Ouaret</a>
         </h3>
         <p class="text-lg text-gray-700">
-           Samy Ouaret, a PHP, React developer, web enthusiast.
+           Backend engineer, MS student in computer networking.
         </p>
     </div>
     </div>
@@ -58,27 +58,6 @@
     <a class='nav-item' href="/">About</a>
     <div>
 </nav>
-<script type="text/javascript">
-
-document.addEventListener('DOMContentLoaded', function (e) {
-    e.preventDefault();
-    var toggler = document.querySelector('.nav-toggler');
-    toggler.addEventListener('click', function (e) {
-        var links = document.querySelector('.nav-links');
-        var collapsed = links.getAttribute('data-collapsed');
-        if (collapsed === "true") {
-            links.style.height = "auto";
-            links.style.overflow = 'auto';
-             links.setAttribute('data-collapsed','false');
-        } else {
-            links.style.height = 0;
-            links.style.overflow = 'hidden';
-             links.setAttribute('data-collapsed','true');
-        }
-    })
-});
-
-</script>
 <article class="flex flex-col mt-6 p-2">
 
 <section class="my-2">
@@ -133,7 +112,7 @@ commentBtn.style.display = "none";
 <link defer rel="stylesheet" href="/build/css/theme.css">
 </div>
         <!--footer-->
-    <div class="p-12 text-center flex flex-col">
+    <div id="footer" class="p-12 text-center flex flex-col">
         <div class="flex-row">
             <a class="p-3 text-2xl text-gray-700 hover:text-blue-400" href="https://twitter.com/samyouaret13"><i
                     class="fa fa-twitter"></i></a>
@@ -142,14 +121,32 @@ commentBtn.style.display = "none";
             <a class="p-3 text-2xl text-gray-700 hover:text-blue-600" href="https://www.linkedin.com/in/samyouaret"><i
                     class="fa fa-linkedin"></i></a>
         </div>
-        <div class="pt-6 pb-2 text-lg">
-            This site is built with
-            <a class="text-gray-700 hover:text-gray-900" href="https://www.11ty.dev/">11ty</a>, <a
-                class="text-gray-700 hover:text-gray-900" href="https://reactjs.org">ReactJS</a>,
+        <div class="pt-6 pb-2 md:text-lg text-sm">
+            built with
+            <a class="text-gray-700 hover:text-gray-900" href="https://www.11ty.dev/">11ty</a>,
             <a class="text-gray-700 hover:text-gray-900" href="https://tailwindcss.com/">TailwindCss</a>, and hosted by
-            <a class="text-gray-700 hover:text-gray-900" href="https://netlify.com/"> Netlify</a>.
+            <a class="text-gray-700 hover:text-gray-900" href="https://netlify.com/"> Netlify &hearts;</a>.
         </div>
     </div><link defer href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/a4efe37a32.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function (e) {
+    e.preventDefault();
+    var toggler = document.querySelector('.nav-toggler');
+    toggler.addEventListener('click', function (e) {
+        var links = document.querySelector('.nav-links');
+        var collapsed = links.getAttribute('data-collapsed');
+        if (collapsed === "true") {
+            links.style.height = "auto";
+            links.style.overflow = 'auto';
+             links.setAttribute('data-collapsed','false');
+        } else {
+            links.style.height = 0;
+            links.style.overflow = 'hidden';
+             links.setAttribute('data-collapsed','true');
+        }
+    })
+});
+</script>
 </body>
 </html>

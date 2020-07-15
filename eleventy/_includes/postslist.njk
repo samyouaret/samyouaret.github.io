@@ -1,12 +1,12 @@
 <div class="flex flex-col mt-6 ml-3">
 {%- for post in posts -%}
    <div class="flex flex-col border-b border-dashed border-b-gray-300">
-   <a href="{{post.url}}" class="text-2xl font-bold text-gray-800 hover:text-blue-700">
+   <a href="{{post.url}}" class="text-2xl block font-bold text-gray-800 hover:text-blue-700">
    <time class="text-sm text-gray-600">{{post.date | readableDate}}</time><br>
    {{post.data.title}}
-   </a><br>
-   <a href="{{post.url}}" class="text-lg my-1 text-gray-800 underline hover:text-gray-900">
-   read</a><br>
+   </a>
+   <a href="{{post.url}}" class="text-lg my text-gray-800 underline hover:text-gray-900">
+   read &rarr;</a><br>
    </div>
 {%- endfor -%}
 </div>

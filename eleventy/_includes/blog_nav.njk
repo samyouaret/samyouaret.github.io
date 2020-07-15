@@ -6,7 +6,7 @@
          <a href="/">{{metadata.author.name}}</a>
         </h3>
         <p class="text-lg text-gray-700">
-           {{metadata.author.description}}
+           {{metadata.author.short_description}}
         </p>
     </div>
     </div>
@@ -21,24 +21,3 @@
     <a class='nav-item' href="/">About</a>
     <div>
 </nav>
-<script type="text/javascript">
-
-document.addEventListener('DOMContentLoaded', function (e) {
-    e.preventDefault();
-    var toggler = document.querySelector('.nav-toggler');
-    toggler.addEventListener('click', function (e) {
-        var links = document.querySelector('.nav-links');
-        var collapsed = links.getAttribute('data-collapsed');
-        if (collapsed === "true") {
-            links.style.height = "auto";
-            links.style.overflow = 'auto';
-             links.setAttribute('data-collapsed','false');
-        } else {
-            links.style.height = 0;
-            links.style.overflow = 'hidden';
-             links.setAttribute('data-collapsed','true');
-        }
-    })
-});
-
-</script>
