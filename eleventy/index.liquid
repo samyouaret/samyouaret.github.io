@@ -8,10 +8,9 @@ templateClass: 'flex flex-col',
   pagination: {
    data: 'collections.posts',
    size: 3,
-   reverse: true,
    alias: 'posts',
    before: function(data) {
-      return data.slice(0, 3).map(post => post);
+      return data.reverse().slice(0, 3).map(post => post);
    }
   }
 }
