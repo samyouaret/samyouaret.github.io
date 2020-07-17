@@ -1,8 +1,13 @@
 ---
 title : Workcation^%4 get& & your place now !
 date: 2020-03-10
-image: /blog/images/post1.png
+image:
+  file: /blog/images/post1.png
+  credit:
+    name: samy ouaret
+    link: samyouaret.me
 description: this just a test post
+
 tags : &topics
   - one
   - two

@@ -32,7 +32,5 @@ module.exports = (options) => {
             })
         );
     }
-    return {
-        plugins: plugins
-    }
+    return { plugins }
 }

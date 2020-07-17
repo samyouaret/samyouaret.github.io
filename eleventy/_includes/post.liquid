@@ -1,63 +1,13 @@
 ---
-layout: blog_layout.njk
+layout: layout.njk
 permalink : "blog/{{ title | slugify }}/index.html"
-style : /build/css/tailwind.css
-templateClass:
-home : /blog
+styles: ["post.css","theme.css"]
 ---
-<article class="flex flex-col mt-6 p-2">
-{% if title %}
-<section class="my-2">
-<h1 class="font-bold text-4xl text-gray-800">{{title}}</h1>
-<time class="text-md text-gray-700 ml-2 mt-1">{{ date | readableDate}}</time>
-</section>
-{% endif %}
-<section class="text-gray-800 leading-relaxed mt-4" style="font-size: 1.15rem;"> 
-{% if image %}
-<img defer src="{{image}}" alt= "{{title}}"  class="my-4 mx-auto max-w-full"/>
-{% endif %}
-{{ content | safe }}
-</section>
-<div class="mt-6">
-{%- if topics -%}
-{%- for topic in topics -%}
-  {%- capture tagUrl -%}/tags/{{ topic }}/{%- endcapture -%}
-  <a href="{{ tagUrl | url }}" 
-  class="px-2 py-1 text-md  rounded-sm text-gray-700 
-  hover:bg-gray-200 bg-gray-300 mr-1">{{ topic }}</a>
-{%- endfor -%}
-{%- endif -%}
-</div>
+
+<article id="article" class="text-gray-800 leading-relaxed mt-4" style="font-size: 1.15rem;">
+{%- include "components/post/post_header.njk" -%}
+    {{ content | safe }}
 </article>
- <div class="my-3 p-2">
- <span class="text-lg text-gray-700 mr-2">Share </span>
-        {%- capture postUrl -%}{{metadata.url}}{{page.url}}{%- endcapture -%}
-        <a class="bg-blue-400 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed" 
-        href="http://twitter.com/share?text={{title | url_encode}}&url={{postUrl}}">
-        <i class="fa fa-twitter"></i></a>
-        <a class="bg-blue-600 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed" 
-        href="https://www.linkedin.com/shareArticle?mini=true&url={{postUrl}}&title={{title | url_encode}}">
-        <i class="fa fa-linkedin"></i></a>
-        <a class="bg-blue-800 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed" 
-        href="https://www.facebook.com/sharer/sharer.php?u={{postUrl}}">
-        <i class="fa fa-facebook"></i></a>
-</div>
-<button id="load-comment" class="px-2 py-1 bg-gray-300 rounded-sm text-lg text-gray-700" 
-onclick="loadComments()">comments</button></a>
-<div id="disqus_thread" class="mt-8"></div>
-<script>
-var disqus_config = function () {
-this.page.url = "{{metadata.url}}{{page.url}}";  
-this.page.identifier = "{{page.url | trimSlashes }}";
-};
-function loadComments() {
-var d = document, s = d.createElement('script');
-s.src = 'https://samyouaret.disqus.com/embed.js';
-s.setAttribute('data-timestamp', + new Date());
-(d.head || d.body).appendChild(s);
-var commentBtn = document.getElementById('load-comment');
-commentBtn.style.display = "none";
-}
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<link defer rel="stylesheet" href="/build/css/theme.css">
+{%- include "components/post/post_footer.liquid" -%}
+{%- include "components/post/disqus_comments.njk" -%}
+{{ styles | cssminFiles }}

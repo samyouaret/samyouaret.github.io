@@ -5,6 +5,8 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
+const path = require('path');
+const fs = require('fs');
 
 module.exports = function (eleventyConfig) {
 
@@ -38,7 +40,16 @@ module.exports = function (eleventyConfig) {
 
     // Minify CSS
     eleventyConfig.addFilter("cssmin", function (code) {
-        return new CleanCSS({}).minify(code);
+        return new CleanCSS({}).minify(code).styles;
+    });
+
+    eleventyConfig.addFilter("cssminFiles", function (files) {
+        let paths = files.map(pathname => {
+            return path.join(__dirname, 'public', 'build',
+                'css', pathname);
+        })
+        let result = new CleanCSS({}).minify(paths).styles;
+        return `<style>${result}</style>`;
     });
 
     // make feriendly url
@@ -52,6 +63,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("dump", function (value) {
         console.log(value);
+    });
+    eleventyConfig.addFilter("contains", function (value) {
+        return value.includes('/blog');
     });
 
     eleventyConfig.addFilter("trimSlashes", function (value) {

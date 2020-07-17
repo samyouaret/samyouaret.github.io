@@ -1,9 +1,8 @@
 ---js
 {
-layout: 'page_layout.njk',
-style : '/build/css/tailwind.css',
+layout: 'layout.njk',
 eleventyExcludeFromCollections: true,
-title: 'Samy Ouaret Blog',
+title: 'Samy Ouaret',
 templateClass: 'flex flex-col',
   pagination: {
    data: 'collections.posts',
@@ -21,5 +20,6 @@ templateClass: 'flex flex-col',
   <div class="md:border md:border-gray-200 md:shadow-md md:px-16 md:py-8 mx-auto">
     <h3 class="text-3xl text-gray-800">Blog</h3>
     {% include "postslist.njk" %}
+    <a class=" mt-3 text-lg hover:text-gray-700 text-blue-700" href="/blog">View all articles</a>
   </div>
 </div>

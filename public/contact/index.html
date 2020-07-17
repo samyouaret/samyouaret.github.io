@@ -33,24 +33,23 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#41bff0"><link rel="stylesheet" href="/build/css/tailwind.css"></head>
 
-<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen"  style="min-height:400px">
-    
-<div id="app" class="p-5 mt-20 bg-white min-h-screen"> <nav class="nav">
-     <a href="/">
+<body class="xl:w-2/3 max-w-screen-lg mx-auto"  style="min-height:400px">
+    <div class="p-5 md:mt-8 min-h-screen"><nav class="nav"><a href="/">
          <h1 class="font-bold text-4xl hover:text-gray-800 text-blue-900">Samy Ouaret</h1>
-     </a>
-     <div class="nav-toggler">
-         <span class='toggler-bar'></span>
-         <span class='toggler-bar'></span>
-         <span class='toggler-bar'></span>
-     </div>
-     <div class="mt-3 sm:mt-0 nav-links" data-collapsed="true">
-         <a class='nav-item' href="/resume">Resume</a>
-         <a class='nav-item' href="/contact">Get in touch</a>
-         <a class='nav-item' href="/blog">Blog</a>
-     </div>
- </nav><div class="md:w-4/6 mx-auto my-12">
-    <p class="text-sm md:text-lg text-gray-800">You may reach me on <a class="text-blue-700 underline" href="#footer">social media links</a> at the bottom of the page or by filling out the form below.</p><form class="w-full max-w-lg my-8 mx-auto" method="POST" data-netlify="true">
+     </a><div class="nav-toggler">
+        <span class='toggler-bar'></span>
+        <span class='toggler-bar'></span>
+        <span class='toggler-bar'></span>
+    </div>
+    <div class="nav-links" data-collapsed="true">
+        <a class='nav-item' href="/about">About</a>
+        <a class='nav-item' href="/contact">Contact</a>
+        <a class='nav-item' href="/blog">Blog</a>
+        <a class='nav-item' href="/tags">Topics</a>
+        <div>
+</nav>
+<div class="md:w-4/6 mx-auto my-12">
+    <p class="text-sm md:text-lg text-gray-800">You may reach me on <a class="text-blue-700 underline" href="#footer">social media links</a> at the bottom of the page or by filling out the form below.</p><form name="contact" class="w-full max-w-lg my-8 mx-auto" method="POST" data-netlify="true">
     <div class="flex flex-wrap mb-6">
         <div class="w-full mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -150,11 +149,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
         if (collapsed === "true") {
             links.style.height = "auto";
             links.style.overflow = 'auto';
-             links.setAttribute('data-collapsed','false');
+            links.setAttribute('data-collapsed','false');
         } else {
             links.style.height = 0;
             links.style.overflow = 'hidden';
-             links.setAttribute('data-collapsed','true');
+            links.setAttribute('data-collapsed','true');
         }
     })
 });

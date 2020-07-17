@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-   <title>Samy Ouaret Blog | three</title>
+   <title>three | Samy Ouaret</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <meta name="mobile-web-app-capable" content="yes">
@@ -10,9 +10,9 @@
     <meta name="keywords" content="Samy Ouaret,Samy,Ouaret,web developer,React,PHP,Algeria">
     <!-- open graph -->    
     <meta property="og:site_name" content="Samy Ouaret">
-    <meta property="og:title" content="Samy Ouaret Blog | three">
+    <meta property="og:title" content="three | Samy Ouaret">
     <meta property="og:image" content="https://ouaretsamy.me/images/samyouaret450x450-min.jpg">
-    <meta property="og:image:alt" content="Samy Ouaret Blog | three">
+    <meta property="og:image:alt" content="three | Samy Ouaret">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://ouaretsamy.me/tags/three/">
     <meta property="og:locale" content="en_US">
@@ -33,39 +33,28 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#41bff0"><link rel="stylesheet" href="/build/css/tailwind.css"></head>
 
-<body class="xl:w-2/3 max-w-screen-lg mx-auto min-h-screen"  style="min-height:400px">
-    <div class="p-5 mt-20 flex flex-col">
-<nav class="nav">
-   <div class="flex" style="max-width:80%">
-    <img src="/images/samyouaret150x150-min.png" class="w-20 h-20 rounded-full"/>
-    <div class="flex flex-col ml-3">
-        <h3 class="font-semibold text-xl text-gray-800">
-         <a href="/">Samy Ouaret</a>
-        </h3>
-        <p class="text-lg text-gray-700">
-           Backend engineer, MS student in computer networking.
-        </p>
+<body class="xl:w-2/3 max-w-screen-lg mx-auto"  style="min-height:400px">
+    <div class="p-5 md:mt-8 min-h-screen"><nav class="nav"><a href="/">
+         <h1 class="font-bold text-4xl hover:text-gray-800 text-blue-900">Samy Ouaret</h1>
+     </a><div class="nav-toggler">
+        <span class='toggler-bar'></span>
+        <span class='toggler-bar'></span>
+        <span class='toggler-bar'></span>
     </div>
-    </div>
-     <div class="nav-toggler">
-               <span class='toggler-bar'></span>
-               <span class='toggler-bar'></span>
-               <span class='toggler-bar'></span>
-     </div>
     <div class="nav-links" data-collapsed="true">
-    <a class='nav-item' href="/tags">Topics</a>
-    <a class='nav-item' href="/blog">Blog</a>
-    <a class='nav-item' href="/">About</a>
-    <div>
+        <a class='nav-item' href="/about">About</a>
+        <a class='nav-item' href="/contact">Contact</a>
+        <a class='nav-item' href="/blog">Blog</a>
+        <a class='nav-item' href="/tags">Topics</a>
+        <div>
 </nav>
-
 
 <div class="flex flex-col mt-6 pl-3">
 <h1  class="m-3 text-2xl text-gray-900"><span class="font-bold text-gray-800">Topic #three</span></h1>
 
-<div class="flex flex-col mt-6 ml-3"><div class="flex flex-col border-b border-dashed border-b-gray-300">
+<div class="flex flex-col mt-6"><div class="flex flex-col border-b border-dashed border-b-gray-300">
    <a href="/blog/the-ultimate-guid-to-php-standard-library-spl/" class="text-2xl block font-bold text-gray-800 hover:text-blue-700">
-   <time class="text-sm text-gray-600">Mar, 18 2020</time><br>
+   <time class="text-sm font-normal text-gray-700">Mar, 18 2020</time><br>
    The ultimate guid to PHP standard library (SPL)
    </a>
    <a href="/blog/the-ultimate-guid-to-php-standard-library-spl/" class="text-lg my text-gray-800 underline hover:text-gray-900">
@@ -106,11 +95,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
         if (collapsed === "true") {
             links.style.height = "auto";
             links.style.overflow = 'auto';
-             links.setAttribute('data-collapsed','false');
+            links.setAttribute('data-collapsed','false');
         } else {
             links.style.height = 0;
             links.style.overflow = 'hidden';
-             links.setAttribute('data-collapsed','true');
+            links.setAttribute('data-collapsed','true');
         }
     })
 });

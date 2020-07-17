@@ -1,0 +1,90 @@
+#article a,
+#article a:visited {
+    @apply text-blue-700 underline;
+}
+
+#article a:hover,
+#article a:focus,
+#article a:active {
+    @apply text-blue-600;
+}
+
+#article p {
+    @apply mb-5;
+}
+
+#article pre,
+#article code {
+    @apply mb-5;
+}
+
+#article h1,
+#article h2,
+#article h3,
+#article h4,
+#article h5,
+#article h6 {
+    @apply mb-5 font-bold text-gray-900;
+}
+
+#article h1 {
+    @apply text-4xl;
+}
+
+#article h2 {
+    @apply text-3xl;
+}
+
+#article h3 {
+    @apply text-2xl;
+}
+
+#article h4 {
+    @apply text-xl;
+}
+
+#article h5 {
+    @apply text-lg;
+}
+
+#article h6 {
+    @apply text-sm;
+}
+
+#article small {
+    @apply text-sm;
+}
+
+#article img,
+#article canvas,
+#article iframe,
+#article video,
+#article svg,
+#article select,
+#article textarea {
+    @apply max-w-full;
+}
+
+#article blockquote {
+    @apply p-4 border border-l-8 mb-5 border-gray-400;
+}
+
+#article ul,
+#article ol {
+    @apply p-4 list-disc;
+}
+
+#article table,
+#article table td,
+#article table th {
+    @apply text-left border border-gray-300;
+}
+
+#article table {
+    @apply mb-5 border-collapse w-full;
+}
+
+#article table th,
+#article table td {
+    @apply p-4;
+}
