@@ -1,22 +1,42 @@
-<div class="mt-6">
-    {%- if topics -%}
-    {%- for topic in topics -%}
-    {%- capture tagUrl -%}/tags/{{ topic }}/{%- endcapture -%}
-    <a href="{{ tagUrl | url }}" class="px-2 py-1 text-md  rounded-sm text-gray-700 
-  hover:bg-gray-200 bg-gray-300 mr-1">{{ topic }}</a>
-    {%- endfor -%}
-    {%- endif -%}
+<div class="mt-16">
+
+  <div class="mb-6 flex flex-wrap justify-between">
+    <div class="mb-4">
+      {%- if topics -%}
+      {%- for topic in topics -%}
+      {%- capture tagUrl -%}/tags/{{ topic }}/{%- endcapture -%}
+      <a href="{{ tagUrl | url }}" class="px-2 py-1 text-sm rounded-sm text-gray-700 
+  hover:bg-gray-100 bg-gray-200 mr-1">{{ topic }}</a>
+      {%- endfor -%}
+      {%- endif -%}
+    </div>
+    <a href="{{metadata.repository}}/blob/master/{{ page.inputPath }}" class="text-sm sm:text-lg text-blue-700">
+      Edit on GitHub
+    </a>
   </div>
-<div class="my-3 p-2">
-  <span class="text-lg text-gray-700 mr-2">Share </span>
-  {%- capture postUrl -%}{{metadata.url}}{{page.url}}{%- endcapture -%}
-  <a class="bg-blue-400 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
-    href="http://twitter.com/share?text={{title | url_encode}}&url={{postUrl}}">
-    <i class="fa fa-twitter"></i></a>
-  <a class="bg-blue-600 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
-    href="https://www.linkedin.com/shareArticle?mini=true&url={{postUrl}}&title={{title | url_encode}}">
-    <i class="fa fa-linkedin"></i></a>
-  <a class="bg-blue-800 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
-    href="https://www.facebook.com/sharer/sharer.php?u={{postUrl}}">
-    <i class="fa fa-facebook"></i></a>
+  <div class="p-2 mb-16">
+    <span class="uppercase text-sm text-gray-700 mr-2">Share article </span>
+    {%- capture postUrl -%}{{metadata.url}}{{page.url}}{%- endcapture -%}
+    <a class="bg-blue-400 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
+      href="http://twitter.com/share?text={{title | url_encode}}&url={{postUrl}}">
+      <i class="fa fa-twitter"></i></a>
+    <a class="bg-blue-600 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
+      href="https://www.linkedin.com/shareArticle?mini=true&url={{postUrl}}&title={{title | url_encode}}">
+      <i class="fa fa-linkedin"></i></a>
+    <a class="bg-blue-800 text-lg text-white rounded-full w-8 h-8 inline-block text-center leading-relaxed"
+      href="https://www.facebook.com/sharer/sharer.php?u={{postUrl}}">
+      <i class="fa fa-facebook"></i></a>
+  </div>
+
+  <div class="flex mb-6">
+    <img src="{{metadata.author.image_sm}}" class="w-20 h-20 rounded-full" />
+    <div class="flex flex-col ml-3">
+      <h3 class="font-semibold text-xl text-gray-800">
+        <a href="/">{{metadata.author.name}}</a>
+      </h3>
+      <p class="text-lg text-gray-700">
+        {{metadata.author.description}}
+      </p>
+    </div>
+  </div>
 </div>

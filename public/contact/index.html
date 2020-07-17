@@ -31,12 +31,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <meta name="theme-color" content="#41bff0"><link rel="stylesheet" href="/build/css/tailwind.css"></head>
+    <meta name="theme-color" content="#2b6cb0"><link rel="stylesheet" href="/build/css/tailwind.css"></head>
 
 <body class="xl:w-2/3 max-w-screen-lg mx-auto"  style="min-height:400px">
     <div class="p-5 md:mt-8 min-h-screen"><nav class="nav"><a href="/">
-         <h1 class="font-bold text-4xl hover:text-gray-800 text-blue-900">Samy Ouaret</h1>
-     </a><div class="nav-toggler">
+        <h1 class="font-bold text-4xl hover:text-gray-800 text-blue-900">Samy Ouaret</h1>
+    </a><div class="nav-toggler">
         <span class='toggler-bar'></span>
         <span class='toggler-bar'></span>
         <span class='toggler-bar'></span>
@@ -46,53 +46,53 @@
         <a class='nav-item' href="/contact">Contact</a>
         <a class='nav-item' href="/blog">Blog</a>
         <a class='nav-item' href="/tags">Topics</a>
-        <div>
+    </div>
 </nav>
 <div class="md:w-4/6 mx-auto my-12">
     <p class="text-sm md:text-lg text-gray-800">You may reach me on <a class="text-blue-700 underline" href="#footer">social media links</a> at the bottom of the page or by filling out the form below.</p><form name="contact" class="w-full max-w-lg my-8 mx-auto" method="POST" data-netlify="true">
     <div class="flex flex-wrap mb-6">
         <div class="w-full mb-6 md:mb-0">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
                 Name
             </label>
             <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4
                 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="name" type="text" placeholder="your name" required>
+                name="name" id="name" type="text" placeholder="your name" required>
             <p class="text-red-500 text-xs italic hidden" id="name-error">Please fill out this field.</p>
         </div>
     </div>
     <div class="flex flex-wrap mb-6">
         <div class="w-full">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
                 Email
             </label>
             <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="email" type="email" required>
+                id="email" name="email" type="email" required>
             <p class="text-red-500 text-xs italic hidden" id="email-error">Please fill out this field.</p>
         </div>
     </div>
     <div class="flex flex-wrap mb-6">
         <div class="w-full">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="subject">
                 Subject
             </label>
             <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="subject" type="text" required>
+                id="subject" name="subject" type="text" required>
             <p class="text-red-500 text-xs italic hidden" id="subject-error">Please fill out this field.</p>
         </div>
     </div>
     <div class="flex flex-wrap mb-6">
         <div class="w-full">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
                 Message
             </label>
             <textarea
                 class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-                id="message" required></textarea>
-            <p class="text-gray-600 text-xs italic">make sure to add all information.</p>
+                id="message" name="message" required></textarea>
+            <p class="text-gray-600 text-xs italic">please make sure to add all information.</p>
             <p class="text-red-500 text-xs italic hidden" id="message-error">Please fill out this field.</p>
         </div>
     </div>
@@ -104,22 +104,7 @@
             </button>
         </div>
     </div>
-</form>
-<script type="text/javascript">
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var subject = document.getElementById("subject");
-    var message = document.getElementById("message");
-
-    function isEmpty(value) {
-        return value == '';
-    }
-
-    function validateEmail(email) {
-        var reg = /^\S+@\S+$/;
-        return reg.test(String(email).toLowerCase());
-    }
-</script></div>
+</form></div>
 </div>
         <!--footer-->
     <div id="footer" class="p-12 text-center flex flex-col">

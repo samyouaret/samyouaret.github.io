@@ -4,17 +4,11 @@
 /* purgecss end ignore */
 
 .nav {
-    @apply flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @apply flex flex-wrap justify-between;
 }
 
 .nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
+    @apply flex flex-col w-full h-0 overflow-hidden;
 }
 
 @screen md {
@@ -53,7 +47,7 @@
 }
 
 .toggler-bar {
-    @apply bg-gray-800 w-full mt-2;
+    @apply bg-gray-600 block mt-2;
     height: 2px;
 }
 
