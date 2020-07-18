@@ -2,7 +2,7 @@
 title : Workcation^%4 get& & your place now !
 date: 2020-03-10
 image:
-  file: /blog/images/post1.png
+  file: /blog/static/post1.png
   credit:
     name: samy ouaret
     link: samyouaret.me

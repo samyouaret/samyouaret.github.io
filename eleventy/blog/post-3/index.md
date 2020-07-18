@@ -2,7 +2,7 @@
 title : The ultimate guid to PHP standard library (SPL)
 date: 2020-03-18
 image:
-  file: /blog/images/php.png
+  file: /blog/static/php.png
   credit:
     name: samy ouaret
     link: samyouaret.me

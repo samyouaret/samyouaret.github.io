@@ -3,7 +3,6 @@
 layout: 'layout.njk',
 eleventyExcludeFromCollections: true,
 title: 'Samy Ouaret',
-templateClass: 'flex flex-col',
   pagination: {
    data: 'collections.posts',
    size: 3,
@@ -20,6 +19,6 @@ templateClass: 'flex flex-col',
   <div class="md:border md:border-gray-200 md:shadow-md md:px-16 md:py-8 mx-auto">
     <h3 class="text-3xl text-gray-800">Blog</h3>
     {% include "postslist.njk" %}
-    <a class=" mt-8 text-lg hover:text-gray-700 text-blue-700" href="/blog">View all articles</a>
+    <a class="text-lg hover:text-gray-700 text-blue-700" href="/blog">View all articles</a>
   </div>
 </div>

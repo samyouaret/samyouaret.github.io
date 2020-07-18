@@ -22,11 +22,11 @@ module.exports = function (eleventyConfig) {
     // add plugin to build rss feed
     eleventyConfig.addPlugin(pluginRss);
     // eleventyConfig.addPlugin(pluginNavigation);
-    // when changing input must specify input directory when copying files **eleventy
-    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.jpg": "blog/images" });
-    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.png": "blog/images" });
-    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.gif": "blog/images" });
-    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.css": "blog/images" });
+    // when changing input must specify input directory when copying files ** eleventy
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.jpg": "blog/static" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.png": "blog/static" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.gif": "blog/static" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.css": "blog/static" });
     // add markdown parsers
     let options = {
         html: true,

@@ -2,7 +2,7 @@
 title : What about leaving the town
 date: 2020-03-15
 image:
-  file: /blog/images/beack-work.jpg
+  file: /blog/static/post-1.jpg
   credit:
     name: samy ouaret
     link: samyouaret.me
