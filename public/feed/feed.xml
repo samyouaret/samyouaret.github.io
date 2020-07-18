@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Samy Ouaret</title>
-	<subtitle>Backend engineer, PHP developer, Nodejs, React, MS student in computer networking, web enthusiast.</subtitle>
+	<subtitle>Backend Engineer, PHP, Nodejs, and React developer, MS student in computer networking, web enthusiast.</subtitle>
 	
 	<link href="https://ouaretsamy.me/feed/feed.xml" rel="self"/>
 	<link href="https://ouaretsamy.me"/>

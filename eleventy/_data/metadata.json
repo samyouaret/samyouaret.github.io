@@ -3,7 +3,7 @@
   "url": "https://ouaretsamy.me",
   "description": "Samy Ouaret, a PHP, React developer, web enthusiast.",
   "feed": {
-    "subtitle": "Backend engineer, PHP developer, Nodejs, React, MS student in computer networking, web enthusiast.",
+    "subtitle": "Backend Engineer, PHP, Nodejs, and React developer, MS student in computer networking, web enthusiast.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://ouaretsamy.me/"
@@ -12,13 +12,13 @@
     "name": "Samy Ouaret",
     "image_sm": "/images/samyouaret150x150-min.png",
     "image_md": "/images/samyouaret450x450-min.jpg",
-    "description": "Backend engineer, PHP developer, Nodejs, React, MS student in computer networking, web enthusiast.",
-    "short_description": "Backend engineer."
+    "description": "Backend Engineer, PHP developer, Nodejs, React, MS student in computer networking, web enthusiast.",
+    "short_description": "Backend Engineer"
   },
   "links": {
     "twitter": "https://twitter.com/samyouaret13",
     "github": "https://github.com/samyouaret",
     "linkedin": "https://www.linkedin.com/in/samyouaret"
   },
-  "repository": "https://github.com/samyouaret/samyouaret.github.io"
+  "repository": "https://github.com/samyouaret/samyouaret.me"
 }
