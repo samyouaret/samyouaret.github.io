@@ -10,8 +10,9 @@
   },
   "author": {
     "name": "Samy Ouaret",
-    "image_sm": "/images/samyouaret150x150-min.png",
-    "image_md": "/images/samyouaret450x450-min.jpg",
+    "email": "samyouaret13@gmail.com",
+    "image_sm": "/static/images/samyouaret150x150-min.png",
+    "image_md": "/static/images/samyouaret450x450-min.jpg",
     "description": "Backend Engineer, PHP developer, Nodejs, React, MS student in computer networking, web enthusiast.",
     "short_description": "Backend Engineer"
   },

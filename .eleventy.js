@@ -45,7 +45,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("cssminFiles", function (files) {
         let paths = files.map(pathname => {
-            return path.join(__dirname, 'public', 'build',
+            return path.join(__dirname, 'public', 'static',
                 'css', pathname);
         })
         let result = new CleanCSS({}).minify(paths).styles;

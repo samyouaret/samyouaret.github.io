@@ -7,7 +7,6 @@ image:
     name: samy ouaret
     link: samyouaret.me
 description: this just a test post
-
 tags : &topics
   - one
   - two

@@ -12,8 +12,6 @@ module.exports = (options) => {
         plugins.push(
             require('@fullhuman/postcss-purgecss')({
                 content: [
-                    './src/js/**/*.js',
-                    './src/js/*.js',
                     './eleventy/*.njk',
                     './eleventy/*.liquid',
                     './eleventy/*.md',

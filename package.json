@@ -2,15 +2,14 @@
   "name": "ouaret-samy-blog",
   "version": "2.0.0",
   "description": "personal blog of Samy Ouaret",
-  "main": "src/js/index.js",
   "scripts": {
-    "buildcss": "postcss src/css/*.css --base --dir public/build/css --env=prod",
-    "watchcss": "postcss src/css/*.css --base --dir public/build/css --watch --env=dev",
+    "buildcss": "postcss src/css/*.css --base --dir public/static/css --env=prod",
+    "watchcss": "postcss src/css/*.css --base --dir public/static/css --watch --env=dev",
     "watcheleventy": "eleventy --watch",
     "serveeleventy": "eleventy --serve",
     "debugeleventy": "DEBUG=* eleventy",
     "buildeleventy": "eleventy",
-    "build": "postcss src/css/*.css --base --dir public/build/css --env=prod & eleventy"
+    "build": "postcss src/css/*.css --base --dir public/static/css --env=prod && eleventy"
   },
   "repository": {
     "type": "git",
