@@ -9,7 +9,7 @@
     "serve": "eleventy --serve",
     "debugeleventy": "DEBUG=* eleventy",
     "buildeleventy": "eleventy",
-    "build": "postcss src/css/*.css --base --dir public/static/css --env=prod && DEBUG=* eleventy"
+    "build": "postcss src/css/*.css --base --dir public/static/css --env=prod && eleventy"
   },
   "repository": {
     "type": "git",
