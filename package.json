@@ -6,7 +6,7 @@
     "buildcss": "postcss src/css/*.css --base --dir public/static/css --env=prod",
     "watchcss": "postcss src/css/*.css --base --dir public/static/css --watch --env=dev",
     "watcheleventy": "eleventy --watch",
-    "serveeleventy": "eleventy --serve",
+    "serve": "eleventy --serve",
     "debugeleventy": "DEBUG=* eleventy",
     "buildeleventy": "eleventy",
     "build": "postcss src/css/*.css --base --dir public/static/css --env=prod && eleventy"
