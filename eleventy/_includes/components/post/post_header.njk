@@ -1,7 +1,7 @@
 <section class="mt-6 p-2">
 {%- if title -%}
     <h1 style="margin-bottom: 0;" id="post-tilte" class="text-gray-800">{{title}}</h1>
-    <time class="text-sm ml-1 text-gray-700">{{ date | readableDate}}</time>
+    <time class="text-sm ml-1 text-gray-700">{{ date | readableDate }}</time>
   {%- endif -%}
   {%- if image -%}
     <img defer src="{{image.file}}" alt="{{title}}" class="mt-4 mx-auto max-w-full" />

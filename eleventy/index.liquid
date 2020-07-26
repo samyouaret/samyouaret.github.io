@@ -8,7 +8,7 @@ title: 'Samy Ouaret',
    size: 3,
    alias: 'posts',
    before: function(data) {
-      return data.reverse().slice(0, 3).map(post => post);
+      return data.slice(-3).map(post => post).reverse();
    }
   }
 }
@@ -19,6 +19,8 @@ title: 'Samy Ouaret',
   <div class="md:border md:border-gray-200 md:shadow-md md:px-16 md:py-8 mx-auto">
     <h3 class="text-3xl text-gray-800">Blog</h3>
     {% include "postslist.njk" %}
+    {% if posts.size != 0 %}
     <a class="text-lg hover:text-gray-700 text-blue-700" href="/blog">View all articles</a>
+    {% endif %}
   </div>
 </div>

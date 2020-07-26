@@ -23,6 +23,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     // eleventyConfig.addPlugin(pluginNavigation);
     // when changing input must specify input directory when copying files ** eleventy
+    eleventyConfig.addPassthroughCopy({ "eleventy/static/images": "static/images" });
+    eleventyConfig.addPassthroughCopy({ "eleventy/config/*": "/" });
+
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.jpg": "blog/static" });
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.png": "blog/static" });
     eleventyConfig.addPassthroughCopy({ "eleventy/blog/**/*.gif": "blog/static" });
@@ -45,9 +48,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("cssminFiles", function (files) {
         let paths = files.map(pathname => {
-            return path.join(__dirname, 'public', 'static',
-                'css', pathname);
-        })
+            return path.join(__dirname, pathname);
+        });
         let result = new CleanCSS({}).minify(paths).styles;
         return `<style>${result}</style>`;
     });

@@ -8,5 +8,7 @@
    <a href="{{post.url}}" class="text-lg my text-gray-800 underline hover:text-gray-900">
    read &rarr;</a><br>
    </div>
-{%- endfor -%}
+{% else %}
+    <p class="text-center text-gray-600 text-lg">No Articles yet.</p>
+{% endfor %}
 </div>
