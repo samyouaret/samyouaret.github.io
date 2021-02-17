@@ -4,4 +4,4 @@
   status = 404
 [build]
  publish = "public/"
- command = "npm run build"
+ command = "yarn run build"
