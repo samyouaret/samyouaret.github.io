@@ -8,8 +8,7 @@ image:
     link: https://unsplash.com/@jordanharrison
 description: Introduction to computer networking for web developers
 tags : &topics
-  - one
-  - two
+  - computer networking
 topics : *topics
 ---
 
