@@ -3,14 +3,14 @@
 layout: 'layout.njk',
 eleventyExcludeFromCollections: true,
 title: 'Samy Ouaret',
-  pagination: {
-   data: 'collections.posts',
-   size: 3,
-   alias: 'posts',
-   before: function(data) {
-      return data.slice(-3).map(post => post).reverse();
-   }
-  }
+pagination: {
+data: 'collections.posts',
+size: 3,
+alias: 'posts',
+before: function(data) {
+return data.slice(-3).map(post => post).reverse();
+}
+}
 }
 ---
 
